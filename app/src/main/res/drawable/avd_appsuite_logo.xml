@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_appsuite_logo">
+
+    <target
+        android:name="arc_top"
+        android:animation="@animator/anim_arc_top_alpha" />
+
+    <target
+        android:name="arc_right"
+        android:animation="@animator/anim_arc_right_alpha" />
+
+    <target
+        android:name="arc_bottom"
+        android:animation="@animator/anim_arc_bottom_alpha" />
+
+    <target
+        android:name="arc_left"
+        android:animation="@animator/anim_arc_left_alpha" />
+</animated-vector>

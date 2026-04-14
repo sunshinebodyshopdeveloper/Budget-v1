@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/google_white">
+
+    <!-- Candado superior -->
+    <ImageView
+        android:id="@+id/ivLock"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_lock"
+        android:tint="@color/google_blue"
+        android:contentDescription="@string/biometric_icon_lock_desc"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvBiometricTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/biometric_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/google_black"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@id/ivLock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Desbloqueo con huella" />
+
+    <!-- Descripción -->
+    <TextView
+        android:id="@+id/tvBiometricMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/biometric_message"
+        android:textSize="14sp"
+        android:textColor="@color/google_dark"
+        android:lineSpacingExtra="2dp"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@id/tvBiometricTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Ahora puedes usar tu huella digital para desbloquear tu AppSuite o verificar que eres tú, como cuando inicias sesión en tu teléfono o apruebas una compra." />
+
+    <!-- Ícono grande de huella -->
+    <ImageView
+        android:id="@+id/ivBiometricIcon"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/biometric_icon_desc"
+        android:src="@drawable/ic_fingerprint_lock"
+        app:layout_constraintTop_toBottomOf="@id/tvBiometricMessage"
+        app:layout_constraintBottom_toTopOf="@id/btnBiometricRetry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="ContentDescription" />
+
+    <!-- Botón para re-abrir el prompt de huella -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBiometricRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AppSuite.Button.Primary"
+        android:layout_marginTop="32dp"
+        android:text="@string/biometric_button_use_data"
+        app:layout_constraintTop_toBottomOf="@id/ivBiometricIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ivBrand" />
+
+    <!-- Branding fijo en el bottom -->
+    <ImageView
+        android:id="@+id/ivBrand"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_appsuite_branding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="40dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

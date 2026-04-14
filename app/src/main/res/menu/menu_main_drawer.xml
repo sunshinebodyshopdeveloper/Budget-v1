@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- OPERACIÓN -->
+    <group android:checkableBehavior="single">
+
+        <!-- 1. Inicio -->
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/nav_home" />
+
+        <!-- 2. Escanear QR -->
+        <item
+            android:id="@+id/nav_scan_qr"
+            android:icon="@drawable/ic_qr"
+            android:title="@string/nav_scan_qr" />
+
+        <!-- 3. Orders -->
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_order"
+            android:title="@string/nav_orders" />
+
+        <!-- 4. Ingreso grúa -->
+        <item
+            android:id="@+id/nav_enter_tow"
+            android:icon="@drawable/ic_tow"
+            android:title="@string/nav_enter_tow" />
+
+        <!-- 5. Nuevo inventario -->
+        <item
+            android:id="@+id/nav_new_inventory"
+            android:icon="@drawable/ic_inventory"
+            android:title="@string/nav_new_inventory" />
+
+        <!-- 6. Citas -->
+        <item
+            android:id="@+id/nav_appointments"
+            android:icon="@drawable/ic_calendar"
+            android:title="@string/nav_appointments" />
+
+        <!-- 6. Asignaciones -->
+        <item
+            android:id="@+id/nav_assignments"
+            android:icon="@drawable/ic_assignments"
+            android:title="@string/nav_assignments" />
+
+        <!-- 7. Rastreo -->
+        <item
+            android:id="@+id/nav_tracking"
+            android:icon="@drawable/ic_tracking"
+            android:title="@string/nav_tracking" />
+
+        <!-- 9. Refacciones -->
+        <item
+            android:id="@+id/nav_parts"
+            android:icon="@drawable/ic_parts"
+            android:title="@string/nav_parts" />
+
+        <item
+            android:enabled="false"
+            android:title=""
+            app:actionLayout="@layout/nav_menu_divider" />
+
+        <!-- 10. Centro de ayuda -->
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help"
+            android:textColor="@color/google_dark"
+            android:iconTint="@color/google_dark"
+            android:title="@string/nav_help" />
+
+        <!-- 11. Acerca de AppSuite -->
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info"
+            android:textColor="@color/google_dark"
+            android:iconTint="@color/google_dark"
+            android:title="@string/nav_about" />
+    </group>
+
+</menu>

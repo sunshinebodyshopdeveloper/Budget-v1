@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_profile_sheet_surface">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <!-- TÍTULO PRINCIPAL -->
+        <TextView
+            android:id="@+id/tvBiometricTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/biometric_title"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/google_black"
+            android:gravity="center_horizontal"
+            tools:text="Usar huella para desbloquear" />
+
+        <!-- SUBTÍTULO / DESCRIPCIÓN -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/biometric_sheet_message"
+            android:textSize="14sp"
+            android:textColor="@color/google_dark"
+            android:lineSpacingExtra="2dp"
+            tools:text="Activa el desbloqueo con huella para entrar más rápido a AppSuite." />
+
+        <!-- ESTADO (compatibilidad, advertencias, etc.) -->
+        <TextView
+            android:id="@+id/tvBiometricStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textSize="13sp"
+            android:textColor="@color/google_dark"
+            tools:text="Este dispositivo es compatible con huella digital." />
+
+        <!-- ÍCONO DE HUELLA CENTRAL -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/ivBiometricIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_fingerprint_lock"
+                android:tint="@color/google_blue"
+                android:contentDescription="@string/biometric_icon_desc"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <!-- HINT TIPO “Touch the fingerprint sensor” -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/biometric_sheet_hint"
+            android:textSize="13sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/google_dark"
+            tools:text="Toca el sensor para activar tu huella." />
+
+        <!-- BOTONES ACCIÓN -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <!-- Cancelar: estilo texto -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelBiometric"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:minWidth="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:insetLeft="12dp"
+                android:insetRight="12dp"
+                android:text="@string/biometric_sheet_cancel"
+                android:textSize="14sp"
+                app:cornerRadius="999dp"
+                app:strokeWidth="0dp"
+                app:backgroundTint="@android:color/transparent" />
+
+            <!-- Activar: botón pill tipo “Use PIN” del sistema -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEnableBiometric"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:minWidth="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:insetLeft="20dp"
+                android:insetRight="20dp"
+                android:text="@string/biometric_sheet_enable"
+                android:textSize="14sp"
+                app:cornerRadius="999dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

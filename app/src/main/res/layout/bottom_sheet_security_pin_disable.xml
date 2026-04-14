@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- TÍTULO PRINCIPAL -->
+    <TextView
+        android:id="@+id/tvPinTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pin_disable_title"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/google_black"
+        android:gravity="center_horizontal" />
+
+    <!-- SUBTÍTULO / DESCRIPCIÓN -->
+    <TextView
+        android:id="@+id/tvPinSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/pin_disable_message"
+        android:textSize="14sp"
+        android:textColor="@color/google_dark"
+        android:lineSpacingExtra="2dp" />
+
+    <!-- ESTADO / MENSAJE DINÁMICO -->
+    <TextView
+        android:id="@+id/tvPinStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="13sp"
+        android:textColor="@color/google_dark"
+        android:gravity="center_horizontal"
+        tools:text="Tu PIN de 4 dígitos está activo para acceder a AppSuite." />
+
+    <!-- ÍCONO CENTRAL -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_pin_lock"
+            android:tint="@color/google_blue"
+            android:contentDescription="@string/pin_disable_icon_desc"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <!-- HINT / TEXTO FINAL -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/pin_disable_hint"
+        android:textSize="13sp"
+        android:textColor="@color/google_dark"
+        android:gravity="center_horizontal"
+        tools:text="Al continuar, se te pedirá tu PIN actual para confirmar." />
+
+    <!-- BOTONES -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelPin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pin_disable_cancel" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDisablePin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/pin_disable_confirm" />
+    </LinearLayout>
+
+</LinearLayout>

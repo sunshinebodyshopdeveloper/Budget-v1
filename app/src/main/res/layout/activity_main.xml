@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/google_white">
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Botón menú hamburguesa -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnMenu"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="28dp"
+            app:cardUseCompatPadding="false"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/google_background_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_menu"
+                android:layout_gravity="center"
+                android:contentDescription="@string/menu"
+                app:tint="@color/menu_button_icon" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Botón perfil de usuario (avatar) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnProfile"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="28dp"
+            app:cardUseCompatPadding="false"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/google_background_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_profile"
+                android:layout_gravity="center"
+                android:contentDescription="@string/profile"
+                app:tint="@color/menu_button_icon" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Contenedor de fragments -->
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnMenu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Barra inferior (no flotante, estilo Google simple) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            app:cardCornerRadius="500dp"
+            app:cardElevation="1dp"
+            app:strokeWidth="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <include
+                android:id="@+id/bottom_nav_main"
+                layout="@layout/bottom_nav_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- MENÚ LATERAL (HAMBURGUESA) -->
+    <!-- CONTENEDOR DEL MENÚ LATERAL (card flotante tipo Drive) -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="-20dp"
+            android:background="@android:color/transparent"
+            app:cardCornerRadius="20dp"
+            app:cardUseCompatPadding="false"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <!-- Fondo con esquinas redondeadas solo del lado derecho -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/bg_nav_drawer_panel">
+
+                <!-- NavigationView REAL -->
+                <com.google.android.material.navigation.NavigationView
+                    android:id="@+id/navigationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fitsSystemWindows="false"
+                    android:background="@android:color/transparent"
+                    app:headerLayout="@layout/layout_nav_header"
+                    app:menu="@menu/menu_main_drawer"
+                    app:itemIconTint="@color/nav_item_icon_tint"
+                    app:itemTextColor="@color/nav_item_text_tint"
+                    app:itemBackground="@drawable/nav_item_background"
+                    app:itemTextAppearance="@style/Text.AppSuite.NavItem"
+                    app:itemIconPadding="16dp"
+                    app:itemVerticalPadding="12dp" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/google_line"
+                    app:dividerThickness="1dp" />
+
+                <include
+                    layout="@layout/layout_nav_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Botón "Opciones" con icono -->
+    <item
+        android:id="@+id/action_options"
+        android:title="@string/assistant_options"
+        android:icon="@drawable/ic_options"
+        app:showAsAction="always">
+
+        <!-- Submenú -->
+        <menu>
+            <item
+                android:id="@+id/action_new_chat"
+                android:icon="@drawable/ic_reload_chat"
+                android:title="@string/assistant_new_chat" />
+
+            <item
+                android:id="@+id/action_help"
+                android:icon="@drawable/ic_help"
+                android:title="@string/assistant_help" />
+        </menu>
+
+    </item>
+
+</menu>

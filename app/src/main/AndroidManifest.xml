@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <queries>
+        <package android:name="com.sunshine.appsuite.gruas" />
+        <package android:name="com.sunshine.appsuite.tracking" />
+        <package android:name="com.sunshine.appsuite.parts" />
+        <package android:name="com.sunshine.appsuite.estimates" />
+        <package android:name="com.sunshine.appsuite.assignments" />
+    </queries>
+
+    <application
+        android:name=".budget.AppSuiteApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppSuite"
+        tools:targetApi="31">
+        <activity
+            android:name=".budget.orders.budget.BudgetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".budget.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".budget.settings.system.wallpaper.ui.WallpaperActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name=".budget.assistant.AssistantActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".budget.orders.ServiceOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.orders.ServiceOrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.tools.qr.QrScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.tools.qr.SmartScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.tools.appointments.AppointmentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.tools.appointments.ui.create.CreateAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.tools.appointments.ui.edit.EditAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.system.network.NoInternetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.update.UpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.legal.LegalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.settings.apps.AppsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.settings.security.AppLockActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".budget.settings.account.PasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.settings.account.ProfilePhotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.NotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.settings.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.legal.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.shortcuts.ShortcutRouterActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@style/Theme.AppSuite.Transparent" />
+        <activity
+            android:name=".budget.onboarding.OnboardingActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".budget.LoginActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".budget.settings.security.SecurityAdvisoryReceiver"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="barcode,ocr" />
+    </application>
+</manifest>

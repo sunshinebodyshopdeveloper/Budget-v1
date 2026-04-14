@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/google_background_settings"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.Material3.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/google_background_settings"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@color/google_icons"
+        app:title="@string/work_order_details_title"
+        app:titleCentered="false"
+        app:titleTextColor="@color/google_icons_state" />
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextAppearance.Material3.LabelLarge.Emphasized"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/work_order_code_title"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:id="@+id/tvQrRawValue"
+            style="@style/TextAppearance.Material3.LabelLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/work_order_code_placeholder"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvQrNameClient"
+                    style="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work_order_client_name_placeholder"
+                    android:textIsSelectable="true" />
+
+                <TextView
+                    android:id="@+id/tvVehicleTitle"
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work_order_client_vehicle_title_placeholder"
+                    tools:text="Marca Modelo Año" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnOpenServiceOrder"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:cardBackgroundColor="@color/google_background_card"
+                android:contentDescription="@string/work_order_detail_os"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/work_order_detail_os"
+                    android:src="@drawable/ic_open_new"
+                    app:tint="@color/menu_button_icon" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <Space android:layout_width="1dp" android:layout_height="20dp"/>
+
+        <HorizontalScrollView
+            android:id="@+id/contentActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Detalle -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/orderDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="100dp"
+                    app:strokeWidth="0dp"
+                    app:cardBackgroundColor="@color/google_white"
+                    android:contentDescription="@string/work_order_detail_actions_client_data">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="18dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            app:cardBackgroundColor="@color/home_blue_light"
+                            app:cardCornerRadius="21dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/work_order_client_data_title"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_profile" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            style="@style/TextAppearance.Material3.LabelLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/work_order_client_data_title" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Inventario -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/orderTel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="100dp"
+                    app:strokeWidth="0dp"
+                    app:cardBackgroundColor="@color/google_white"
+                    android:contentDescription="@string/work_order_detail_actions_cia_data">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="18dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            app:cardBackgroundColor="@color/home_yellow_light"
+                            app:cardCornerRadius="21dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/work_order_cia_data_title"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_docs" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            style="@style/TextAppearance.Material3.LabelLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/work_order_cia_data_title" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Fotos -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/orderWhatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="100dp"
+                    app:strokeWidth="0dp"
+                    app:cardBackgroundColor="@color/google_white"
+                    android:contentDescription="@string/work_order_detail_actions_vehicle_data">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="18dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            app:cardBackgroundColor="@color/home_green_light"
+                            app:cardCornerRadius="21dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/work_order_vehicle_data_title"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_car" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            style="@style/TextAppearance.Material3.LabelLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/work_order_vehicle_data_title" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <Space android:layout_width="1dp" android:layout_height="20dp"/>
+    </LinearLayout>
+
+    <!-- Swipe-to-refresh (solo 1 child directo) -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshOrders"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Content container (overlay FAB aquí) -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_bottom_sheet"
+            android:padding="24dp">
+
+            <!-- Contenido real -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/qr_scanner_ot_sheet_vehicle_meta_placeholder"
+                        android:src="@drawable/ic_car" />
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="1dp" />
+
+                    <TextView
+                        android:id="@+id/tvVehicleMeta"
+                        style="@style/TextAppearance.Material3.BodyMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/qr_scanner_ot_sheet_vehicle_meta_placeholder"
+                        android:textColor="?attr/colorOnSurfaceVariant"
+                        tools:text="color - placas - tipo" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/peekAnchor"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="8dp">
+
+                    <!-- Chip actual (cliente) -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipOtTypeClient"
+                        style="@style/Widget.Material3.Chip.Assist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@string/qr_scanner_ot_sheet_client_placeholder"
+                        app:chipBackgroundColor="?attr/colorPrimaryContainer"
+                        app:chipCornerRadius="100dp"
+                        app:chipIcon="@drawable/ic_no_crash"
+                        app:chipIconSize="20dp"
+                        app:chipIconTint="?attr/colorPrimary"
+                        app:chipIconVisible="true"
+                        app:chipStrokeWidth="0dp" />
+
+                    <!-- Ingreso por grúa -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipReceivedByTow"
+                        style="@style/Widget.Material3.Chip.Assist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@string/qr_scanner_ot_sheet_tow_entry"
+                        android:visibility="gone"
+                        app:chipBackgroundColor="?attr/colorPrimaryContainer"
+                        app:chipCornerRadius="100dp"
+                        app:chipIcon="@drawable/ic_tow"
+                        app:chipIconSize="20dp"
+                        app:chipIconTint="?attr/colorPrimary"
+                        app:chipIconVisible="true"
+                        app:chipStrokeWidth="0dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

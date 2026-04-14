@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/google_background_settings">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.Material3.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/google_background_settings"
+        app:title="@string/settings_section_wallpaper_title"
+        app:titleCentered="false"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@color/google_icons"
+        app:titleTextColor="@color/google_icons_state" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/bg_bottom_sheet">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_wallpaper_settings"
+            android:contentDescription="@string/apps_detail_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            style="@style/TextAppearance.Material3.HeadlineMedium"
+            android:text="@string/settings_section_wallpaper_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:text="@string/settings_section_wallpaper_desc"
+            android:textColor="@color/google_text_secondary" />
+
+        <Space android:layout_width="1dp" android:layout_height="24dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp"
+                    app:cardBackgroundColor="@color/home_blue_light">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Row: Correo -->
+                        <LinearLayout
+                            android:id="@+id/rowAccountStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="16dp"
+                            android:layout_marginVertical="8dp"
+                            android:gravity="center_vertical"
+                            android:foreground="?attr/selectableItemBackground">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_wallpaper"
+                                android:contentDescription="@string/account_profile_title_3"
+                                app:tint="@color/google_blue" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <!-- Título acción: Correo -->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Text.AppSuite.SectionTitle"
+                                    android:text="@string/settings_section_wallpaper_info_title"
+                                    android:textColor="@color/google_icons" />
+
+                                <!-- Descripción acción: Correo -->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Text.AppSuite.BodySecondary"
+                                    android:text="@string/settings_section_wallpaper_info_desc"
+                                    android:textColor="@color/google_dark" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <Space android:layout_width="1dp" android:layout_height="24dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- On/Off -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardControl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/google_white"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/google_background_settings"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/wallpaperIconBg"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp"
+                                app:cardBackgroundColor="@color/home_green_light"
+                                app:cardCornerRadius="21dp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:strokeWidth="0dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@string/settings_section_wallpaper_desc"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_gallery_thumbnail"
+                                    app:tint="?attr/colorOnPrimaryContainer" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:id="@+id/tvWallpaperTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="@string/settings_section_wallapper_control_title"
+                                android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                                android:textColor="?attr/colorOnSurface"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/wallpaperIconBg" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/settings_section_wallapper_control_desc"
+                                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                                android:textColor="?attr/colorOnSurfaceVariant"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tvWallpaperTitle" />
+
+                            <com.google.android.material.materialswitch.MaterialSwitch
+                                android:id="@+id/switchWallpaper"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:thumbIcon="@drawable/ic_check"
+                                app:thumbIconSize="16dp"
+                                app:trackTint="@color/switch_colors"
+                                android:contentDescription="@string/settings_section_wallpaper_desc"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:clickable="false"
+                                android:focusable="false"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Space android:layout_width="1dp" android:layout_height="24dp"/>
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggleWallpaperMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:singleSelection="true"
+                    app:selectionRequired="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnModeFixed"
+                        style="@style/Widget.AppSuite.ToggleButton.WallpaperMode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:icon="@drawable/ic_image"
+                        android:text="@string/settings_section_wallapper_control_fixed" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnModeRandom"
+                        style="@style/Widget.AppSuite.ToggleButton.WallpaperMode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:icon="@drawable/ic_shuffle"
+                        android:text="@string/settings_section_wallapper_control_random" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <Space android:layout_width="1dp" android:layout_height="24dp"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="40dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/carouselRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager"/>
+
+                    <com.google.android.material.loadingindicator.LoadingIndicator
+                        style="@style/Widget.Material3.LoadingIndicator.Contained"
+                        android:id="@+id/loadingWallpapers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:indicatorColor="@color/google_blue"
+                        android:contentDescription="@string/settings_section_wallpaper_title"
+                        android:visibility="visible"/>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

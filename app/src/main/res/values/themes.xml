@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===================== -->
+    <!-- THEME BASE COMPARTIDO -->
+    <!-- ===================== -->
+    <style name="Base.Theme.AppSuite" parent="Theme.Material3Expressive.DayNight.NoActionBar">
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/google_blue</item>
+    </style>
+
+    <!-- ===================== -->
+    <!-- THEME PRINCIPAL -->
+    <!-- ===================== -->
+    <style name="Theme.AppSuite" parent="Base.Theme.AppSuite">
+        <!-- Si quieres FULL nativo (sin tu paleta), puedes borrar estos items.
+             Si quieres Expressive pero con tu paleta, déjalos. -->
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
+
+        <item name="colorSecondary">@color/md_theme_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_onSecondary</item>
+
+        <item name="colorSurface">@color/md_theme_surface</item>
+        <item name="colorOnSurface">@color/md_theme_onSurface</item>
+
+        <item name="android:colorBackground">@color/md_theme_background</item>
+
+        <!-- DatePicker nativo (sin personalizar) -->
+        <item name="materialCalendarTheme">@style/ThemeOverlay.AppSuite.DatePicker</item>
+    </style>
+
+    <!-- Home -->
+    <style name="Theme.AppSuite.Home" parent="Theme.AppSuite">
+        <item name="android:colorBackground">@color/google_background_home</item>
+    </style>
+
+    <!-- Splash -->
+    <style name="Theme.AppSuite.Splash" parent="Theme.AppSuite">
+        <item name="android:windowBackground">@color/google_white</item>
+    </style>
+
+    <!-- Theme transparente -->
+    <style name="Theme.AppSuite.Transparent" parent="Base.Theme.AppSuite">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <!-- Theme overlay (sin colores custom) -->
+    <style name="ThemeOverlay.AppSuite.DatePicker" parent="ThemeOverlay.Material3.MaterialCalendar" />
+
+</resources>
