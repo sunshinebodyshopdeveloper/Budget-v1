@@ -27,25 +27,6 @@
     </style>
 
     <!-- Home -->
-    <style name="Theme.AppSuite.Home" parent="Theme.AppSuite">
-        <item name="android:colorBackground">@color/google_background_home_night</item>
-    </style>
-
-    <style name="Theme.AppSuite.Transparent" parent="Theme.AppSuite">
-        <!-- Fully transparent window -->
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:colorBackground">@android:color/transparent</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-
-        <!-- No UI chrome -->
-        <item name="android:windowNoTitle">true</item>
-
-        <!-- Keep system bars transparent too -->
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-    </style>
 
     <!-- ===================== -->
     <!-- THEME PRINCIPAL (NIGHT) -->
@@ -61,49 +42,6 @@
         <item name="colorOnSurface">@color/md_theme_onSurface</item>
 
         <item name="android:colorBackground">@color/md_theme_background</item>
-    </style>
-
-    <!-- Splash -->
-    <style name="Theme.AppSuite.Splash" parent="Theme.AppSuite">
-        <!-- En dark, mejor fondo real de dark (no dependas de “google_white”) -->
-        <item name="android:windowBackground">@color/google_background</item>
-    </style>
-
-    <!-- ===================== -->
-    <!-- FIXES NIGHT IMPORTANTES -->
-    <!-- ===================== -->
-
-    <!-- Outlined/Secondary: en dark, background transparente para que NO se vea “manchado” -->
-    <style name="AppSuite.Button.Secondary" parent="Widget.Material3.Button">
-        <item name="backgroundTint">@android:color/transparent</item>
-
-        <item name="android:textColor">@color/google_button_sec_text</item>
-        <item name="iconTint">@color/google_button_sec_text</item>
-
-        <item name="strokeColor">@color/google_button_sec_stroke</item>
-        <item name="strokeWidth">1dp</item>
-
-        <item name="rippleColor">@color/google_button_sec_ripple</item>
-
-        <item name="cornerRadius">24dp</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:textAppearance">@style/Text.AppSuite.Button</item>
-    </style>
-
-    <!-- TextInput “Filled”: en night NO uses google_white como stroke (se te desaparece) -->
-    <style name="App.InputLayout.Filled" parent="Widget.Material3.TextInputLayout.FilledBox">
-        <item name="boxBackgroundColor">@color/google_background_settings</item>
-
-        <item name="boxCornerRadiusTopStart">24dp</item>
-        <item name="boxCornerRadiusTopEnd">24dp</item>
-        <item name="boxCornerRadiusBottomStart">24dp</item>
-        <item name="boxCornerRadiusBottomEnd">24dp</item>
-
-        <item name="boxStrokeWidth">0dp</item>
-        <item name="boxStrokeWidthFocused">1dp</item>
-
-        <!-- Visible en dark -->
-        <item name="boxStrokeColor">@color/google_line</item>
     </style>
 
 </resources>

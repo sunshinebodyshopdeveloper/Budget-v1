@@ -38,13 +38,11 @@
                 tools:visibility="visible">
 
                 <View
-                    android:id="@+id/vDotRing"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:background="@drawable/bg_ot_timeline_ring_current" />
 
                 <View
-                    android:id="@+id/vDotInner"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_gravity="center"

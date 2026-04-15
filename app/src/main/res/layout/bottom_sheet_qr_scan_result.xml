@@ -28,7 +28,6 @@
             android:paddingBottom="20dp">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardCover"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:strokeWidth="0dp"
@@ -118,7 +117,6 @@
                 android:layout_height="1dp" />
 
             <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chipGroupInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"

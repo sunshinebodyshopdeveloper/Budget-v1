@@ -127,36 +127,6 @@ class ProfileBottomSheetDialog : BottomSheetDialogFragment() {
 
         store.ensureFresh()
 
-        // 🌙 Row: modo claro/oscuro (texto + ícono)
-        val rowNight = view.findViewById<LinearLayout>(com.sunshine.appsuite.budget.R.id.rowNight)
-        val themeIcon = view.findViewById<ImageView>(com.sunshine.appsuite.budget.R.id.themeStyleIcon)
-        val themeLabel = view.findViewById<TextView>(com.sunshine.appsuite.budget.R.id.themeStyleLabel)
-
-        fun renderThemeRow() {
-            val isDark = ThemePreferences.isDarkActive(requireContext())
-            if (isDark) {
-                themeIcon?.setImageResource(com.sunshine.appsuite.budget.R.drawable.ic_light_mode)
-                themeLabel?.setText(com.sunshine.appsuite.budget.R.string.profile_theme_light)
-            } else {
-                themeIcon?.setImageResource(com.sunshine.appsuite.budget.R.drawable.ic_dark_mode)
-                themeLabel?.setText(com.sunshine.appsuite.budget.R.string.profile_theme_dark)
-            }
-        }
-
-        renderThemeRow()
-
-        rowNight?.setOnClickListener {
-            ThemePreferences.toggle(requireContext())
-            dismiss() // al cambiar theme, se recrea la activity; mejor cerrar el sheet
-        }
-
-        // Logout
-        val btnLogout = view.findViewById<Button>(com.sunshine.appsuite.budget.R.id.btnLogout)
-        btnLogout?.setOnClickListener {
-            profileMenuListener?.onProfileLogout()
-            dismiss()
-        }
-
         val cardSettingsAccount = view.findViewById<CardView>(com.sunshine.appsuite.budget.R.id.cardSettingsAccount)
         cardSettingsAccount.setOnClickListener {
             SettingsActivity.Companion.start(requireContext(), SettingsActivity.Section.ACCOUNT)
@@ -170,16 +140,6 @@ class ProfileBottomSheetDialog : BottomSheetDialogFragment() {
 
         view.findViewById<LinearLayout>(com.sunshine.appsuite.budget.R.id.rowApps)?.setOnClickListener {
             startActivity(Intent(requireContext(), AppsActivity::class.java))
-            dismiss()
-        }
-
-        view.findViewById<LinearLayout>(com.sunshine.appsuite.budget.R.id.rowSecurity)?.setOnClickListener {
-            SettingsActivity.Companion.start(requireContext(), SettingsActivity.Section.SECURITY)
-            dismiss()
-        }
-
-        view.findViewById<LinearLayout>(com.sunshine.appsuite.budget.R.id.rowUpdates)?.setOnClickListener {
-            startActivity(Intent(requireContext(), UpdateActivity::class.java))
             dismiss()
         }
 

@@ -9,10 +9,7 @@ class HomeSectionRepository(context: Context) {
 
     fun getSections(): MutableList<HomeSection> {
         val defaultTypes = listOf(
-            HomeSection.Type.FUNCTIONS,
-            HomeSection.Type.QUICK_ACTIONS,
-            HomeSection.Type.APPOINTMENTS,
-            HomeSection.Type.TRACKING
+            HomeSection.Type.FUNCTIONS
         )
 
         val savedOrderIds = prefs.getString(KEY_ORDER, null)

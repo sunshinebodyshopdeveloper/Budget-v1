@@ -6,10 +6,6 @@
         <item name="fontFamily">@font/open_sans_bold</item>
     </style>
 
-    <style name="Text.AppSuite.TitleSecondary" parent="TextAppearance.Material3.HeadlineMedium">
-        <item name="fontFamily">@font/open_sans_regular</item>
-    </style>
-
     <!-- TÍTULO DE SECCIÓN (Cuenta, Seguridad, Notificaciones...) -->
     <style name="Text.AppSuite.SectionTitle" parent="TextAppearance.Material3.TitleMedium">
         <item name="fontFamily">@font/open_sans_semibold</item>
@@ -40,30 +36,11 @@
     <!-- TEXTO TOOLBAR -->
 
     <!-- NavigationView -->
-    <style name="Text.AppSuite.NavItem" parent="Text.AppSuite.Body">
-        <item name="android:textColor">@color/nav_item_text_tint</item>
-    </style>
 
     <!-- BottomNav -->
-    <style name="Text.AppSuite.BottomNav" parent="Text.AppSuite.Caption">
-        <item name="android:gravity">center</item>
-        <item name="android:textAlignment">center</item>
-    </style>
 
     <!-- Título grande para onboarding -->
-    <style name="Text.AppSuite.OnboardingTitle" parent="Text.AppSuite.Title">
-        <item name="fontFamily">@font/open_sans_regular</item>
-        <item name="android:textSize">40sp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textAlignment">center</item>
-    </style>
 
     <!-- Subtítulo de onboarding -->
-    <style name="Text.AppSuite.OnboardingSubtitle" parent="Text.AppSuite.Body">
-        <item name="fontFamily">@font/open_sans_regular</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textAlignment">center</item>
-    </style>
 
 </resources>

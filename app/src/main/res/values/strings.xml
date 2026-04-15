@@ -5,8 +5,6 @@
     <string name="action_access">Acceder</string>
     <string name="label_username">Usuario</string>
     <string name="label_password">Contraseña</string>
-    <string name="action_skip">Omitir</string>
-    <string name="action_finish">Finalizar</string>
     <string name="label_version_full">Sunshine AppSuite v3.0</string>
     <string name="back_exit_confirm">Presiona Atrás 2 veces para salir</string>
 
@@ -27,55 +25,28 @@
     <string name="biometric_icon_lock_desc">Ícono de candado</string>
 
     <!-- Onboarding: pantalla 1 -->
-    <string name="onboarding_title_1">Bienvenido a SunShine AppSuite</string>
-    <string name="onboarding_subtitle_1">
-        AppSuite te ayuda a controlar las órdenes de trabajo y el flujo del taller desde tu dispositivo.
-    </string>
 
     <!-- Onboarding: pantalla 2 -->
-    <string name="onboarding_title_2">Verificación por código QR</string>
-    <string name="onboarding_subtitle_2">
-        Escanea el QR SBS de la OT para ver el detalle del vehículo, cliente y avance de reparación.
-    </string>
 
     <!-- Onboarding: pantalla 3 -->
-    <string name="onboarding_title_3">Asignación rápida y eficaz</string>
-    <string name="onboarding_subtitle_3">
-        Usa el QR de empleado para registrar quién trabaja cada unidad y llevar control de cargas de trabajo.
-    </string>
 
     <!-- Onboarding: pantalla 4 -->
-    <string name="onboarding_title_4">Seguimiento en tiempo real</string>
-    <string name="onboarding_subtitle_4">
-        Registra inventarios, fotos de proceso y ubicación de las unidades, todo ligado al mismo QR SBS.
-    </string>
 
     <!--Text MainMenu-->
-    <string name="menu">Menu</string>
-    <string name="main_menu_home">Inicio</string>
-    <string name="main_menu_qr">QR</string>
-    <string name="main_menu_assistant">Asistente</string>
     <string name="profile">Perfil</string>
     <string name="close">Cerrar</string>
 
     <!-- Placeholders de perfil -->
     <string name="profile_user_name_placeholder">Nombre del usuario</string>
     <string name="profile_user_email_placeholder">correo@sunshine.mx</string>
-    <string name="profile_user_photo_edit">Cambiar foto</string>
 
     <!-- Botón de sesión -->
-    <string name="profile_logout">Cerrar sesión</string>
 
     <!-- Opciones principales -->
     <string name="profile_notifications">Notificaciones</string>
     <string name="profile_apps_manage">Administrar aplicaciones</string>
-    <string name="profile_account_security">Seguridad de la cuenta</string>
-    <string name="profile_theme_dark">Modo oscuro</string>
-    <string name="profile_theme_light">Tema claro</string>
-    <string name="profile_check_updates">Buscar actualizaciones</string>
 
     <!-- Opciones secundarias -->
-    <string name="profile_last_sync">Última sincronización</string>
     <string name="profile_settings">Configuración</string>
     <string name="profile_help_support">Ayuda y soporte</string>
 
@@ -89,26 +60,10 @@
 
     <string name="cd_profile_notifications_icon">Icono de notificaciones</string>
     <string name="cd_profile_apps_icon">Icono de administrar aplicaciones</string>
-    <string name="cd_profile_security_icon">Icono de seguridad de la cuenta</string>
-    <string name="cd_profile_updates_icon">Icono de buscar actualizaciones</string>
-    <string name="cd_profile_sync_icon">Icono de última sincronización</string>
     <string name="cd_profile_settings_icon">Icono de configuración</string>
     <string name="cd_profile_help_icon">Icono de ayuda y soporte</string>
 
     <!-- Drawer / navegación lateral -->
-    <string name="nav_home">Inicio</string>
-    <string name="nav_scan_qr">Escanear QR</string>
-    <string name="nav_orders">Ordenes de Servicio</string>
-    <string name="nav_enter_tow">Ingreso grúa</string>
-    <string name="nav_new_inventory">Nuevo inventario</string>
-    <string name="nav_appointments">Citas</string>
-    <string name="nav_assignments">Asignaciones</string>
-    <string name="nav_tracking">Rastreo</string>
-    <string name="nav_parts">Refacciones</string>
-    <string name="nav_help">Centro de ayuda</string>
-    <string name="nav_about">Acerca de AppSuite</string>
-    <string name="nav_settings">Ajustes</string>
-    <string name="nav_logout">Cerrar sesion</string>
 
     <!-- About -->
     <string name="about_title">Acerca de</string>
@@ -144,7 +99,6 @@
     <string name="account_profile_notice">Tu foto de perfil solo es visible en AppSuite</string>
 
     <string name="settings_section_security_title">Seguridad y acceso</string>
-    <string name="settings_section_security_subtitle">Dispositivos, autenticación y protección de la cuenta</string>
     <string name="security_check_title">Verificación de seguridad</string>
     <string name="security_check_subtitle">Tienes sugerencias de seguridad</string>
     <string name="security_check_button">Tu cuenta está protegida</string>
@@ -173,7 +127,6 @@
 
     <string name="settings_section_password_title">Contraseña de AppSuite</string>
     <string name="settings_section_password_subtitle">Contraseña</string>
-    <string name="settings_section_password_desc">Cambia tu contraseña para mantener tu cuenta segura.</string>
     <string name="password_intro">Elige una contraseña segura y no la reutilices en otras cuentas.</string>
     <string name="password_devices_warning">Es posible que se cierre tu sesión en algunos dispositivos después de cambiarla.</string>
     <string name="password_new_label">Contraseña nueva</string>
@@ -303,32 +256,11 @@
 
     <string name="apps_title">Apps - módulos AppSuite</string>
 
-    <string name="home_title">Panorama general</string>
     <string name="home_section_functions_subtitle">Funciones</string>
     <string name="home_section_functions_assistant">Abrir asistente</string>
     <string name="home_section_functions_orders">Ver ordenes</string>
     <string name="home_section_functions_appointments">Agendar citas</string>
     <string name="home_section_functions_tows">Ingreso de grúa</string>
-    <string name="home_section_search_ot">Buscador</string>
-
-    <string name="home_tile_tracking">Rastreo de unidades</string>
-    <string name="cd_home_tile_icon">Ícono de ubicación</string>
-
-    <string name="home_tile_quickActions">Acciones rápidas</string>
-    <string name="home_tile_quickActions_inventory">Inventario</string>
-    <string name="home_tile_quickActions_assignments">Asignaciones</string>
-    <string name="home_tile_quickActions_parts">Refacciones</string>
-    <string name="home_tile_quickActions_tracking">Rastreo</string>
-
-    <string name="home_title_search_ot">Buscar por Placa, OT, Siniestro</string>
-    <string name="daily_work_estimate">Presupuestos</string>
-    <string name="daily_work_repair">Hojalatería</string>
-    <string name="daily_work_paint">Pintura</string>
-    <string name="daily_work_assemble">Armado</string>
-    <string name="daily_work_mechanic">Mecánica</string>
-    <string name="home_button_text_assignments">Ver asignaciones</string>
-
-    <string name="home_title_appoiments">Citas programadas</string>
 
     <string name="support_cd_logo">Logotipo de AppSuite</string>
     <string name="support_cd_expand">Mostrar u ocultar sección</string>
@@ -389,101 +321,10 @@
     <string name="no_internet_hint">Tip: si estás en datos móviles, revisa modo avión o el ahorro de datos.</string>
     <string name="no_internet_icon_desc">Sin conexión a internet</string>
 
-    <string name="shortcut_photos_long">Abrir Fotos</string>
-    <string name="shortcut_qr">Escanear QR</string>
-    <string name="shortcut_qr_long">Escanear código QR</string>
-    <string name="shortcut_assistant">Asistente</string>
-    <string name="shortcut_assistant_long">Iniciar asistente inteligente</string>
-    <string name="shortcut_support">Ayuda</string>
-    <string name="shortcut_support_long">Ayuda y soporte</string>
-
-    <string name="appointments_title">Citas</string>
-    <string name="appointments_icon_edit">Editar</string>
-    <string name="appointments_total_placeholder">Hoy tienes %d</string>
-    <string name="appointments_filter_all">Todos (%d)</string>
-    <string name="appointments_filter_presupuesto">Presupuesto (%d)</string>
-    <string name="appointments_filter_ingreso">Ingreso (%d)</string>
-    <string name="appointments_filter_entrega">Entrega (%d)</string>
-    <string name="appointments_scheduled_title">Citas programadas</string>
-    <string name="appointments_today_helper">Citas de hoy. Usa los filtros para ver Presupuesto, Ingreso o Entrega.</string>
-    <string name="appointments_details_type_placeholder">@string/appointments_create_type</string>
-    <string name="appointments_details_copy">Consulta la información de la cita y usa las acciones rápidas si necesitas contactar al cliente.</string>
-    <string name="appointments_details_info">Detalles de la cita</string>
-    <string name="appointments_details_contact">Medio de contacto</string>
-    <string name="appointments_vehicle_title">Detalles del vehículo</string>
-    <string name="appointments_vehicle_brand">Marca</string>
-    <string name="appointments_vehicle_model">Modelo</string>
-    <string name="appointments_vehicle_color">Color</string>
-    <string name="appointments_vehicle_plates">Placas</string>
-    <string name="appointments_fact_date">Fecha</string>
-    <string name="appointments_fact_time">Hora</string>
-    <string name="appointments_fact_host">Tipo cita</string>
-    <string name="appointments_fact_status">Estado</string>
-    <string name="appointments_fact_contact_tel">Llamar</string>
-    <string name="appointments_fact_contact_wts">WhatsApp</string>
-    <string name="appointments_fact_contact_tel_desc">Realizar llamada al cliente</string>
-    <string name="appointments_fact_contact_wts_desc">Envíar mensaje de WhatsApp al cliente</string>
-    <string name="appointments_fact_contact_mail">Enviar correo</string>
-    <string name="appointments_fact_contact_mail_desc">Enviar un correo electrónico al cliente</string>
-    <string name="appointments_placeholder_value">—</string>
-    <string name="appointments_details_open_error">No se pudo abrir la acción.</string>
-    <string name="appointments_error_loading">No se pudieron cargar las citas.</string>
-    <string name="appointments_empty">No hay citas para mostrar.</string>
-    <string name="appointments_status_pending">Pendiente</string>
-    <string name="appointments_status_default">@string/appointments_status_pending</string>
-    <string name="appointments_comment_empty">Sin comentarios</string>
-    <string name="appointments_comment_placeholder">Comentarios</string>
-    <string name="appointments_create_comment">@string/appointments_comment_placeholder</string>
-    <string name="appointments_details_confirm_button">Confirmar cita</string>
-    <string name="appointments_create_title">Nueva cita</string>
-    <string name="appointments_create_title_widow">Crear nueva cita</string>
-    <string name="appointments_create_subtitle">Completa los datos para agendar la cita.</string>
-    <string name="appointments_create_customer_section">Cliente</string>
-    <string name="appointments_create_customer_name">Nombre</string>
-    <string name="appointments_create_customer_phone">Teléfono</string>
-    <string name="appointments_create_customer_type">Tipo de cliente</string>
-    <string name="appointments_create_phone_helper">Solo números (10 dígitos).</string>
-    <string name="appointments_create_customer_email">Correo</string>
-    <string name="appointments_create_email_helper">Correo electrónico</string>
-    <string name="appointments_create_save">Crear cita</string>
-    <string name="appointments_fab_create_cd">@string/appointments_create_save</string>
-    <string name="appointments_create_date">Fecha de cita</string>
-    <string name="appointments_create_date_label">@string/appointments_fact_date</string>
-    <string name="appointments_create_date_open_picker">Abrir selector de fecha</string>
-    <string name="appointments_create_start_time">Horario de atención</string>
-    <string name="appointments_create_time_label">@string/appointments_fact_time</string>
-    <string name="appointments_vehicle_year">Año</string>
-    <string name="appointments_time_placeholder">--:--</string>
-    <string name="appointments_create_time_placeholder_dashes">@string/appointments_time_placeholder</string>
-    <string name="appointments_create_type">Tipo de cita</string>
-    <string name="appointments_create_type_label">Tipo</string>
-    <string name="appointments_create_type_placeholder">@string/appointments_create_type</string>
-    <string name="appointments_create_open_type_picker">Abrir selector de tipo</string>
-    <string name="appointments_create_status">@string/appointments_fact_status</string>
-    <string name="appointments_button_placeholder">Crear cita</string>
-    <string name="appointments_cancelled_notice">Esta cita fue cancelada y será eliminada en las próximas 72 hrs.</string>
-    <string name="home_reorder">Reordenar</string>
-    <string name="appointments_notification_channel_name">Citas</string>
-    <string name="appointments_notification_channel_desc">Notificaciones cuando se crea una cita.</string>
-    <string name="appointments_notification_created_title">Nueva cita creada</string>
-    <string name="appointments_notification_action_view">Ver detalle</string>
-    <string name="home_loading">Cargando…</string>
-    <string name="appointments_edit_title_widow">Editar cita</string>
-    <string name="appointments_edit_title">Editar cita</string>
-    <string name="appointments_edit_save">Guardar cambios</string>
-    <string name="appointments_insurance_type">Tipo de cliente</string>
-    <string name="appointments_cancel_appointment">Cancelar cita</string>
-    <string name="appointments_cancel_confirm_message">¿Seguro que quieres cancelar esta cita? Esta acción no se puede deshacer.</string>
-    <string name="appointments_cancel_confirm_yes">Sí, cancelar</string>
-
     <!-- Home Widgets -->
     <!-- Appointments -->
 
     <!-- Tracking -->
-    <string name="tracking_widget_total">Total</string>
-    <string name="tracking_widget_on_floor">En piso</string>
-    <string name="tracking_widget_in_transit">En tránsito</string>
-    <string name="tracking_widget_pending_entry">Por ingresar</string>
 
     <string name="qr_scanner_title">Escanea el código QR</string>
     <string name="qr_scanner_close">Cerrar</string>
@@ -507,10 +348,7 @@
     <string name="qr_scanner_ot_action_tel">Llamar</string>
     <string name="qr_scanner_ot_cd_action_whatsapp">Enviar WhatsApp</string>
     <string name="qr_scanner_ot_action_whatsapp">WhatsApp</string>
-    <string name="qr_scanner_ot_sheet_close_ot">Cerrar OT</string>
     <string name="qr_scanner_ot_sheet_ot_placeholder">Obteniendo datos</string>
-    <string name="qr_scanner_ot_sheet_client_placeholder">Tipo cliente</string>
-    <string name="qr_scanner_ot_sheet_vehicle_title_placeholder">Sin datos</string>
     <string name="qr_scanner_ot_sheet_vehicle_meta_placeholder">—</string>
     <string name="qr_scanner_invalid_qr_title">Código QR inválido</string>
     <string name="qr_scanner_toast_camera_permission_required">Se necesitan permisos para usar la cámara.</string>
@@ -533,29 +371,14 @@
     <string name="qr_scanner_toast_call_client_missing">No hay teléfono del cliente</string>
     <string name="qr_scanner_toast_whatsapp_missing">No hay teléfono para WhatsApp</string>
     <string name="qr_scanner_toast_whatsapp_not_installed">WhatsApp no está instalado</string>
-    <string name="qr_scanner_toast_start_error">Error al iniciar la cámara</string>
     <string name="qr_scanner_whatsapp_message_no_code">Hola, te contactamos de Sunshine Body Shop.</string>
     <string name="qr_scanner_whatsapp_message_with_code">Hola, te contactamos de Sunshine Body Shop por tu OT %1$s.</string>
     <string name="qr_scanner_contentTools_copy">Copiar código QR</string>
     <string name="qr_scanner_contentTools_share">Compartir código QR</string>
     <string name="qr_scanner_contentTools_print">Imprimir Orden de trabajo</string>
-    <string name="qr_scanner_contentTools_open">Abrir orden de servicio</string>
     <string name="qr_scanner_ot_sheet_tow_entry">Ingreso por grúa</string>
-    <string name="qr_scanner_ot_comments_title">Comentarios</string>
-    <string name="qr_scanner_ot_comments_empty">Sin comentarios</string>
-    <string name="qr_scanner_ot_comments_hint_new">Nuevo comentario</string>
-    <string name="qr_scanner_ot_comments_send">Enviar comentario</string>
-    <string name="qr_scanner_ot_comments_toast_sent">Comentario enviado.</string>
-    <string name="qr_scanner_ot_comments_toast_failed">No se pudo enviar el comentario.</string>
-    <string name="qr_scanner_ot_comments_toast_load_failed">No se pudieron cargar los comentarios.</string>
-    <string name="qr_scanner_ot_comments_toast_need_status">No se puede comentar sin estatus.</string>
-    <string name="qr_scanner_ot_comments_toast_need_text">Escribe un comentario.</string>
 
     <string name="work_order_details_title">Detalle de la OT</string>
-    <string name="work_order_code_title">Código OT</string>
-    <string name="work_order_code_placeholder">OT-XXX-000000-C0000</string>
-    <string name="work_order_client_name_placeholder">Nombre cliente</string>
-    <string name="work_order_client_vehicle_title_placeholder">Marca Modelo Año</string>
     <string name="work_order_detail_os">Abrir orden de servicio</string>
     <string name="work_order_detail_actions_client_data">Ver datos del cliente</string>
     <string name="work_order_data_title">Datos generales</string>
@@ -565,24 +388,11 @@
     <string name="work_order_detail_actions_vehicle_data">Ver datos del vehículo</string>
     <string name="work_order_vehicle_data_title">Datos del vehículo</string>
 
-    <string name="service_orders_title">Órdenes de servicio</string>
     <string name="service_orders_toast_no_more">No hay más datos</string>
     <string name="service_orders_toast_generic_error">Ocurrió un problema</string>
     <string name="service_orders_loading_more">Cargando…</string>
     <string name="service_orders_retry">Reintentar</string>
     <string name="service_orders_cd_loading_more">Cargando más órdenes de servicio</string>
-
-    <string name="assistant_title">Asistente</string>
-    <string name="assistant_welcome">Hola!</string>
-    <string name="assistant_welcome_text">Soy tu asistente personal, dime ¿qué necesitas hacer hoy?</string>
-    <string name="assistant_message_hint">Escribe aquí tu consulta...</string>
-    <string name="assistant_send_cd">Enviar</string>
-    <string name="assistant_message_icon_cd">Mensaje</string>
-    <string name="assistant_options">Opciones</string>
-    <string name="assistant_new_chat">Iniciar nuevo chat</string>
-    <string name="assistant_help">Ayuda</string>
-    <string name="assistant_chip_1">Dame la OT de una placa</string>
-    <string name="assistant_chip_2">Dame la OT con el nombre del cliente</string>
 
     <string name="budget_title">Presupuestos</string>
 </resources>

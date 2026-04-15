@@ -31,7 +31,6 @@ import com.sunshine.appsuite.budget.settings.system.verifications.SystemCheckSta
 import com.sunshine.appsuite.budget.settings.system.verifications.SystemVerificationAdapter
 import com.sunshine.appsuite.budget.settings.system.verifications.SystemVerificationRunner
 import com.sunshine.appsuite.budget.settings.system.wallpaper.ui.WallpaperActivity
-import com.sunshine.appsuite.budget.shortcuts.AppShortcutsToggle
 import com.sunshine.appsuite.budget.databinding.FragmentSettingsSystemBinding
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -121,16 +120,6 @@ class SettingsSystemFragment : Fragment() {
 
         // Restablecer orden del Home
         cardHomeOrder.setOnClickListener { resetHomeOrder() }
-
-        // Shortcuts
-        cardShortcuts.setOnClickListener { switchShortcuts.toggle() }
-        switchShortcuts.setOnCheckedChangeListener { _, checked ->
-            val ctx = requireContext()
-            SystemPreferences.setShortcutsEnabled(ctx, checked)
-
-            // ✅ Esto antes te crasheaba por shortcuts “manifest immutable”
-            AppShortcutsToggle.setEnabled(ctx, checked)
-        }
 
         // Wallpaper
         cardWallpaper.setOnClickListener {

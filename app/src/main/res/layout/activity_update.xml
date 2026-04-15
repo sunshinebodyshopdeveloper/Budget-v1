@@ -62,7 +62,6 @@
                 tools:text="Versión 3.0.0 • Última revisión hoy" />
 
             <ImageView
-                android:id="@+id/ivLogo"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_marginBottom="40dp"

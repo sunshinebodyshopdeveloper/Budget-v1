@@ -17,21 +17,6 @@ data class HomeSection(
             id = "functions",
             titleRes = R.string.home_section_functions_subtitle,
             layoutRes = R.layout.item_home_functions
-        ),
-        QUICK_ACTIONS(
-            id = "quick_actions",
-            titleRes = R.string.home_tile_quickActions,
-            layoutRes = R.layout.item_home_quick_actions
-        ),
-        APPOINTMENTS(
-            id = "appointments",
-            titleRes = R.string.home_title_appoiments,
-            layoutRes = R.layout.item_home_appointments
-        ),
-        TRACKING(
-            id = "tracking",
-            titleRes = R.string.home_tile_tracking,
-            layoutRes = R.layout.item_home_tracking
         );
 
         companion object {

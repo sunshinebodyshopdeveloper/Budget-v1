@@ -121,24 +121,12 @@ class SettingsHomeFragment : Fragment() {
             sheet.show(parentFragmentManager, "ProfileBottomSheet")
         }
 
-        binding.cardSecurity.setOnClickListener {
-            navigator?.openSection(SettingsActivity.Section.SECURITY)
-        }
-
-        binding.cardPassword.setOnClickListener {
-            startActivity(Intent(requireContext(), PasswordActivity::class.java))
-        }
-
         binding.cardPermissions.setOnClickListener {
             navigator?.openSection(SettingsActivity.Section.PERMISSIONS)
         }
 
         binding.cardApps.setOnClickListener {
             startActivity(Intent(requireContext(), AppsActivity::class.java))
-        }
-
-        binding.cardSettings.setOnClickListener {
-            navigator?.openSection(SettingsActivity.Section.SYSTEM)
         }
 
         // ✅ Delegado al host (SettingsActivity) para mantener consistencia

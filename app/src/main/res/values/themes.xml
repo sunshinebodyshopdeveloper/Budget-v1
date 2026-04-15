@@ -11,6 +11,16 @@
         <item name="colorPrimary">@color/google_blue</item>
     </style>
 
+    <style name="Theme.AppSuite.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/md_theme_background</item>
+
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_round</item>
+
+        <item name="windowSplashScreenAnimationDuration">200</item>
+
+        <item name="postSplashScreenTheme">@style/Theme.AppSuite</item>
+    </style>
+
     <!-- ===================== -->
     <!-- THEME PRINCIPAL -->
     <!-- ===================== -->
@@ -30,23 +40,6 @@
 
         <!-- DatePicker nativo (sin personalizar) -->
         <item name="materialCalendarTheme">@style/ThemeOverlay.AppSuite.DatePicker</item>
-    </style>
-
-    <!-- Home -->
-    <style name="Theme.AppSuite.Home" parent="Theme.AppSuite">
-        <item name="android:colorBackground">@color/google_background_home</item>
-    </style>
-
-    <!-- Splash -->
-    <style name="Theme.AppSuite.Splash" parent="Theme.AppSuite">
-        <item name="android:windowBackground">@color/google_white</item>
-    </style>
-
-    <!-- Theme transparente -->
-    <style name="Theme.AppSuite.Transparent" parent="Base.Theme.AppSuite">
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowDisablePreview">true</item>
     </style>
 
     <!-- Theme overlay (sin colores custom) -->

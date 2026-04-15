@@ -25,13 +25,7 @@
     <color name="google_icons">#C2E7FF</color>
     <color name="google_button_state">#3C4043</color>
     <color name="google_icons_state">#E8EAED</color>
-    <color name="google_button_bg">#004A77</color>
-    <color name="google_button_text">#D3E3FD</color>
 
-    <color name="google_button_sec_text">#E2E2E6</color>
-    <color name="google_button_sec_stroke">#444746</color>
-    <color name="google_button_sec_ripple">#33FFFFFF</color>
-    <color name="google_text_primary">#E8EAED</color>
     <color name="google_text_secondary">#9AA0A6</color>
     <color name="google_line">#3C4043</color>
     <color name="google_divider">#444746</color>
@@ -43,7 +37,6 @@
     <color name="apps_chip_not_installed_text">#E8EAED</color>
 
     <color name="home_card_select_bg">#004A77</color>
-    <color name="home_card_regular_bg">#28292C</color>
 
     <color name="home_blue_light">#004A77</color>
     <color name="home_yellow_light">#524400</color>
