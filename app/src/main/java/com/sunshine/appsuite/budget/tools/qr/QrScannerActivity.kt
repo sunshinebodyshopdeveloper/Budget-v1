@@ -31,7 +31,6 @@ import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.data.network.ApiClient
 import com.sunshine.appsuite.budget.orders.data.OrdersApi
 import com.sunshine.appsuite.budget.security.TokenManager
-import com.sunshine.appsuite.budget.settings.SettingsActivity
 import com.sunshine.appsuite.budget.databinding.ActivityQrScannerBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -210,31 +209,11 @@ class QrScannerActivity : AppCompatActivity() {
         when {
             hasCameraPermission() -> startCamera()
 
-            shouldShowRequestPermissionRationale(Manifest.permission.CAMERA) ->
-                showCameraPermissionDialogOnce()
-
             else -> {
                 requestingCameraPermission = true
                 requestCameraPermission.launch(Manifest.permission.CAMERA)
             }
         }
-    }
-
-    private fun showCameraPermissionDialogOnce() {
-        if (permissionDialogShown) return
-        permissionDialogShown = true
-
-        MaterialAlertDialogBuilder(this)
-            .setTitle(R.string.qr_scanner_camera_permission_title)
-            .setMessage(R.string.qr_scanner_camera_permission_message)
-            .setPositiveButton(R.string.qr_scanner_camera_permission_go) { _, _ ->
-                navigatingToPermissions = true
-                SettingsActivity.Companion.start(this, SettingsActivity.Section.PERMISSIONS)
-            }
-            .setNegativeButton(R.string.qr_scanner_camera_permission_close) { _, _ ->
-                closeAndGoHome()
-            }
-            .show()
     }
 
     private fun startCamera() {

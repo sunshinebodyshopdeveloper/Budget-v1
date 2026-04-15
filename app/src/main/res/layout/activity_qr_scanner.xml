@@ -34,7 +34,6 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
-            android:id="@+id/tvTitle"
             style="@style/TextAppearance.Material3.TitleLarge.Emphasized"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -110,7 +109,6 @@
             android:background="?attr/selectableItemBackgroundBorderless">
 
             <TextView
-                android:id="@+id/tvFooter"
                 style="@style/TextAppearance.Material3.BodySmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

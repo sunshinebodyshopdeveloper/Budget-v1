@@ -68,13 +68,8 @@ class LoginActivity : AppCompatActivity() {
                 }.trim()
 
                 if (token.isNotEmpty()) {
-                    // 1) Guardar token
                     app.tokenManager.saveToken(token)
 
-                    // 2) Calentar perfil en background (SSOT). No bloquea el login.
-                    app.userProfileStore.ensureFresh(force = true)
-
-                    // 3) Navegar a Main
                     Toast.makeText(
                         this@LoginActivity,
                         "Inicio de sesión exitoso",

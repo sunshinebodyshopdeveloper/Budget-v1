@@ -7,9 +7,6 @@
     </style>
 
     <!-- TÍTULO DE SECCIÓN (Cuenta, Seguridad, Notificaciones...) -->
-    <style name="Text.AppSuite.SectionTitle" parent="TextAppearance.Material3.TitleMedium">
-        <item name="fontFamily">@font/open_sans_semibold</item>
-    </style>
 
     <!-- TEXTO PRINCIPAL (descripciones normales) -->
     <style name="Text.AppSuite.Body" parent="TextAppearance.Material3.BodyMedium">
@@ -22,10 +19,6 @@
     </style>
 
     <!-- MINI TEXTO (labels pequeños, disclaimers) -->
-    <style name="Text.AppSuite.Caption" parent="TextAppearance.Material3.BodySmall">
-        <item name="fontFamily">@font/open_sans_regular</item>
-        <item name="android:textAllCaps">true</item>
-    </style>
 
     <!-- TEXTO DE BOTONES PRINCIPALES -->
     <style name="Text.AppSuite.Button" parent="TextAppearance.Material3.LabelLarge">

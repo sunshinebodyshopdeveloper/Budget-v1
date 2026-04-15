@@ -10,19 +10,6 @@
 
     <!-- Login -->
     <string name="login_subtitle">Accede con tu usuario de AppSuite para empezar a gestionar las órdenes de trabajo.</string>
-    <string name="pin_title">Ingresa tu PIN</string>
-    <string name="pin_error">PIN incorrecto. Inténtalo de nuevo.</string>
-    <string name="pin_disable_title">Desactivar PIN de acceso</string>
-    <string name="pin_disable_message">Actualmente usas un PIN de 4 dígitos para entrar a AppSuite.</string>
-    <string name="pin_disable_hint">Al continuar, se te pedirá tu PIN actual para confirmar esta acción.</string>
-    <string name="pin_disable_cancel">Cancelar</string>
-    <string name="pin_disable_confirm">Desactivar PIN</string>
-    <string name="pin_disable_icon_desc">Ícono de PIN de seguridad</string>
-    <string name="biometric_title">Desbloqueo con huella</string>
-    <string name="biometric_message">Ahora puedes usar tu huella digital para desbloquear tu AppSuite o verificar que eres tú, como cuando inicias sesión en tu teléfono o apruebas una compra.</string>
-    <string name="biometric_button_use_data">Usar datos biométricos</string>
-    <string name="biometric_icon_desc">Ilustración de huella con candado</string>
-    <string name="biometric_icon_lock_desc">Ícono de candado</string>
 
     <!-- Onboarding: pantalla 1 -->
 
@@ -34,7 +21,6 @@
 
     <!--Text MainMenu-->
     <string name="profile">Perfil</string>
-    <string name="close">Cerrar</string>
 
     <!-- Placeholders de perfil -->
     <string name="profile_user_name_placeholder">Nombre del usuario</string>
@@ -43,276 +29,20 @@
     <!-- Botón de sesión -->
 
     <!-- Opciones principales -->
-    <string name="profile_notifications">Notificaciones</string>
-    <string name="profile_apps_manage">Administrar aplicaciones</string>
 
     <!-- Opciones secundarias -->
-    <string name="profile_settings">Configuración</string>
-    <string name="profile_help_support">Ayuda y soporte</string>
 
     <!-- Footer -->
-    <string name="profile_privacy_policy">Política de privacidad</string>
-    <string name="profile_about_appsuite">Acerca de AppSuite</string>
 
     <!-- Content descriptions -->
-    <string name="cd_brand_logo">Logo de Sunshine AppSuite</string>
-    <string name="cd_account_switch">Cambiar de cuenta</string>
-
-    <string name="cd_profile_notifications_icon">Icono de notificaciones</string>
-    <string name="cd_profile_apps_icon">Icono de administrar aplicaciones</string>
-    <string name="cd_profile_settings_icon">Icono de configuración</string>
-    <string name="cd_profile_help_icon">Icono de ayuda y soporte</string>
 
     <!-- Drawer / navegación lateral -->
 
     <!-- About -->
-    <string name="about_title">Acerca de</string>
-    <string name="about_version_text">Estás usando la versión más reciente de AppSuite\nVersión %1$s</string>
-    <string name="about_version_text_placeholder">Estás usando la versión más reciente de AppSuite Versión 1.0.0</string>
-    <string name="about_footer">SunShine AppSuite © 2025</string>
 
     <!-- Settings -->
-    <string name="settings_title">Configuración</string>
-
-    <string name="settings_section_account_title">Información de la cuenta</string>
-    <string name="settings_section_account_subtitle">Nombre, correo y datos básicos del usuario</string>
-    <string name="account_text_1">Tu información de perfil en los servicios de AppSuite</string>
-    <string name="account_text_2">Encontrarás tu información de perfil y las opciones para administrarla. Puedes hacer visible parte de esta información, como tus datos de contacto. Tambien puedes ver un resumen de tu perfil.</string>
-    <string name="account_text_3">Información básica</string>
-    <string name="account_text_4">Es posible que cierta información sea visible para otras personas que usan los servicios de AppSuite, dentro de tu red de trabajo.</string>
-    <string name="account_text_5">Información de contacto</string>
-    <string name="account_text_6">Información de la cuenta</string>
-    <string name="account_profile_title_1">Foto de perfil</string>
-    <string name="account_profile_title_1_desc">Tu foto de eprfil permite personaliar la cuenta</string>
-    <string name="account_profile_title_2">Nombre</string>
-    <string name="account_profile_title_2_desc">Nombre del usuario</string>
-    <string name="account_profile_title_3">Correo</string>
-    <string name="account_profile_title_3_desc">Correo del usuario</string>
-    <string name="account_profile_title_4">Telefono</string>
-    <string name="account_profile_title_4_desc">Telefono del usuario</string>
-    <string name="account_profile_title_6">Cuenta verificada</string>
-    <string name="account_profile_title_6_desc">Verificacion de seguridad de AppSuite</string>
-    <string name="account_profile_btn_save_photo">Guardar foto</string>
-    <string name="account_profile_btn_remove_photo">Quitar foto</string>
-    <string name="account_profile_subtitle">Foto de perfil</string>
-    <string name="account_profile_desc">Una foto ayudará a las personas del taller a reconocerte en Sunshine AppSuite.</string>
-    <string name="account_profile_notice">Tu foto de perfil solo es visible en AppSuite</string>
-
-    <string name="settings_section_security_title">Seguridad y acceso</string>
-    <string name="security_check_title">Verificación de seguridad</string>
-    <string name="security_check_subtitle">Tienes sugerencias de seguridad</string>
-    <string name="security_check_button">Tu cuenta está protegida</string>
-    <string name="security_check_button_desc">La verificación de seguridad revisó tuc uenta y no encontró acciones recomendadas</string>
-    <string name="security_devices_section_title">Tus dispositivos</string>
-    <string name="security_devices_info_icon_desc">Información de dispositivos</string>
-    <string name="security_active_devices_title">Tienes dispositivos activos</string>
-    <string name="security_active_devices_description">Revisa los dispositivos que usas para conectar su cuenta de AppSuite</string>
-    <string name="security_device_icon_desc">Dispositivo asociado a tu cuenta</string>
-    <string name="security_access_title">Cómo acceder a AppSuite</string>
-    <string name="security_access_desc">Mantén esta información actualizada para asegurarte de que siempre puedas acceder a tu cuenta de AppSuite</string>
-    <string name="security_access_code_title">Asignar un código de acceso</string>
-    <string name="security_access_code_desc">Registra un código de acceso de 4 digitos para acceder ed manera segura a AppSuite.</string>
-    <string name="security_access_fingerprint_title">Huella digital</string>
-    <string name="security_access_fingerprint_desc">Iniciar AppSuite con datos biometricos del dispositivo.</string>
-    <string name="biometric_sheet_message">Activa el desbloqueo con huella para entrar más rápido a AppSuite.</string>
-    <string name="biometric_sheet_hint">Toca el sensor para activar tu huella.</string>
-    <string name="biometric_sheet_cancel">Ahora no</string>
-    <string name="biometric_sheet_enable">Activar</string>
-    <string name="security_advisory_title">Recomendación de seguridad</string>
-    <string name="security_advisory_text_app_insecure">Activa huella o PIN para proteger tu cuenta en este dispositivo.</string>
-    <string name="security_advisory_text_device_insecure">Tu dispositivo no tiene bloqueo. Te recomendamos activar huella o PIN para proteger tu cuenta.</string>
-    <string name="security_advisory_action_enable">Activar ahora</string>
-    <string name="security_advisory_action_snooze">Después</string>
-    <string name="security_advisory_action_opt_out">Bajo mi responsabilidad</string>
-
-    <string name="settings_section_password_title">Contraseña de AppSuite</string>
-    <string name="settings_section_password_subtitle">Contraseña</string>
-    <string name="password_intro">Elige una contraseña segura y no la reutilices en otras cuentas.</string>
-    <string name="password_devices_warning">Es posible que se cierre tu sesión en algunos dispositivos después de cambiarla.</string>
-    <string name="password_new_label">Contraseña nueva</string>
-    <string name="password_confirm_label">Confirma la contraseña nueva</string>
-    <string name="password_security_title">Seguridad de la contraseña:</string>
-    <string name="password_security_body">Utiliza al menos 8 caracteres. Evita usar datos obvios como tu nombre, fecha de nacimiento o el nombre de tu mascota.</string>
-    <string name="password_change_button">Cambiar la contraseña</string>
-
-    <string name="settings_section_permissions_title">Permisos y dispositivo</string>
-    <string name="settings_section_permissions_subtitle">Cámara, ubicación, notificaciones y uso del dispositivo</string>
-    <string name="settings_permissions_intro">Controla qué permisos puede usar AppSuite en este dispositivo.</string>
-    <string name="settings_permissions_camera_title">Cámara</string>
-    <string name="settings_permissions_camera_subtitle">Tomar fotos de vehículos, daños y evidencia para las órdenes de trabajo.</string>
-    <string name="settings_permissions_storage_title">Archivos y fotos</string>
-    <string name="settings_permissions_storage_subtitle">Guardar y adjuntar documentos, cotizaciones e imágenes en las órdenes de trabajo.</string>
-    <string name="settings_permissions_location_title">Ubicación</string>
-    <string name="settings_permissions_location_subtitle">Usar tu ubicación para servicios como grúa, recepción en sucursal o seguimiento en mapa.</string>
-    <string name="settings_permissions_notifications_title">Notificaciones</string>
-    <string name="settings_permissions_notifications_subtitle">Enviar avisos sobre citas, actualizaciones de estado y recordatorios importantes del taller.</string>
-    <string name="settings_permissions_lock_icon">Candado de permisos</string>
-    <string name="settings_permissions_how_it_works_title">Cómo funciona:</string>
-    <string name="settings_permissions_step1_title">Elige qué permisos usar</string>
-    <string name="settings_permissions_step1_body">Activa solo los permisos que AppSuite necesita para operar el taller en este dispositivo.</string>
-    <string name="settings_permissions_step2_title">Puedes ajustar en cualquier momento</string>
-    <string name="settings_permissions_step2_body">Cambia estos permisos cuando quieras desde la misma pantalla de configuración.</string>
-    <string name="settings_permissions_step3_title">Más control sobre tu privacidad</string>
-    <string name="settings_permissions_step3_body">Reducimos el acceso a datos que no son necesarios para las funciones del taller.</string>
-
-    <string name="settings_section_apps_title">Aplicaciones</string>
-    <string name="settings_section_apps_subtitle">Acceso a aplicaciones de AppSuite</string>
-    <string name="apps_desc">Consulta las apps de la suite, revisa cuáles tienes instaladas y obtén las que falten.</string>
-    <string name="apps_detail_icon">Icono de la aplicación</string>
-    <string name="apps_detail_toggle_info">Mostrar u ocultar información de la app</string>
-    <string name="apps_detail_size_label">Tamaño</string>
-    <string name="apps_detail_size_sample">106 MB</string>
-    <string name="apps_action_open">Abrir</string>
-    <string name="apps_action_get">Obtener</string>
-    <string name="apps_status_installed">Instalada</string>
-    <string name="apps_status_not_installed">No instalada</string>
-    <string name="apps_install_state_ready">Lista</string>
-    <string name="apps_install_state_pending">Pendiente</string>
-    <string name="apps_status_available">Disponible</string>
-    <string name="apps_status_not_available">No disponible</string>
-    <string name="apps_module_appsuite_title">AppSuite</string>
-    <string name="apps_module_appsuite_desc">App principal para acceder a todos los módulos internos de Sunshine.</string>
-    <string name="apps_module_towing_title">Grúas</string>
-    <string name="apps_module_towing_desc">Registro de ingreso y salida de unidades trasladadas por grúa.</string>
-    <string name="apps_module_tracking_title">Rastreo</string>
-    <string name="apps_module_tracking_desc">Actualiza la ubicación física de las unidades y su etapa en el taller.</string>
-    <string name="apps_module_parts_title">Refacciones</string>
-    <string name="apps_module_parts_desc">Registro de recepción y entrega de refacciones entre proveedores y técnicos.</string>
-    <string name="apps_module_budget_title">Presupuestos</string>
-    <string name="apps_module_budget_desc">Desarmado en piso para verificar daños y estimar la reparación.</string>
-    <string name="apps_module_assignments_title">Asignaciones</string>
-    <string name="apps_module_assignments_desc">Asigna unidades entre jefe de taller y técnicos según su carga de trabajo.</string>
-
-    <string name="settings_section_system_title">Ajustes generales</string>
-    <string name="settings_system_header_title">Configuración general de AppSuite</string>
-    <string name="settings_system_header_subtitle">Ajusta cómo se ve y se comporta AppSuite en este dispositivo.</string>
-    <string name="settings_system_status_title">Sistema verificado</string>
-    <string name="settings_system_status_subtitle">Personaliza la app a tu estilo.</string>
-    <string name="settings_system_header_note">Estos cambios solo aplican en este teléfono.</string>
-    <string name="settings_system_section_controls">Controles</string>
-    <string name="settings_system_theme_title">Color del tema</string>
-    <string name="settings_system_theme_value_system">Automático</string>
-    <string name="settings_system_home_order_title">Orden del Inicio</string>
-    <string name="settings_system_home_order_subtitle_short">Restablecer orden</string>
-    <string name="settings_system_shortcuts_title">Shortcuts</string>
-    <string name="settings_system_shortcuts_subtitle_short">Accesos rápidos</string>
-    <string name="settings_system_wallpaper_title">Fondo de pantalla</string>
-    <string name="settings_system_notifications_title">Notificaciones</string>
-    <string name="settings_system_wallpaper_subtitle_short">Fondo personalizado</string>
-    <string name="settings_system_notifications_subtitle_short">Próximamente</string>
-    <string name="settings_system_cd_status">Estado de configuración</string>
-    <string name="settings_system_cd_theme">Color del tema</string>
-    <string name="settings_system_cd_home_order">Orden del inicio</string>
-    <string name="settings_system_cd_wallpaper">Wallpaper</string>
-    <string name="settings_system_cd_shortcuts">Activar shortcuts</string>
-    <string name="settings_system_cd_notifications">Activar notificaciones</string>
-    <string name="settings_system_checks_title">Chequeo del sistema</string>
-    <string name="settings_system_checks_subtitle">Revisamos lo básico para que AppSuite funcione correctamente.</string>
-    <string name="settings_system_checks_run">Ejecutar verificación</string>
-    <string name="settings_system_section_system">Sistema</string>
-    <string name="settings_system_check_action_enable">Activar</string>
-
-    <string name="settings_section_wallpaper_title">Fondo de pantalla</string>
-    <string name="settings_section_wallpaper_desc">Fondo de pantalla dinámico de AppSuite</string>
-    <string name="settings_section_wallpaper_info_title">Estado del Servicio</string>
-    <string name="settings_section_wallpaper_info_desc">Activa esta función para permitir que AppSuite gestione tus fondos de pantalla. Podrás elegir entre los wallpapers exclusivos disponibles.</string>
-    <string name="settings_section_wallapper_control_title">Fondo de pantalla de Appsuite</string>
-    <string name="settings_section_wallapper_control_desc">Activar o desactivar el control de fondo de pantalla dinámico.</string>
-    <string name="settings_section_wallapper_control_fixed">Fijo</string>
-    <string name="settings_section_wallapper_control_random">Aleatorio</string>
-
-    <string name="notifications_control_title">Control de notificaciones</string>
-    <string name="notifications_control_subtitle">Elige qué avisos mostrar dentro de AppSuite.</string>
-    <string name="notifications_control_all">Activar / desactivar todas</string>
-    <string name="common_close">Cerrar</string>
-    <string name="notif_towing_new_intake">Nuevo ingreso por grúa</string>
-    <string name="notif_ot_new_order">Nueva orden creada</string>
-    <string name="notif_assignment_unit">Aviso de asignación de unidad</string>
-    <string name="notif_tracking_location_change">Cambio de ubicación de unidades</string>
-    <string name="notif_appointment_new">Nueva cita agendada</string>
-    <string name="notif_unit_status">Estatus de unidad (ingreso / proceso / entrega)</string>
-
-    <string name="settings_section_admin_settings">Administración de AppSuite</string>
-    <string name="settings_section_admin_settings_title">Configuración Avanzada</string>
-    <string name="settings_section_admin_settings_subtitle">Gestiona roles, permisos y políticas de seguridad del sistema.</string>
-
-    <string name="settings_section_support">¿Buscas otra información?</string>
-    <string name="settings_section_support_title">Ver opciones de ayuda y soporte</string>
-    <string name="settings_section_support_subtitle">Centro de ayuda y contacto con soporte</string>
-
-    <string name="settings_section_about_title">Acerca de AppSuite</string>
-    <string name="settings_section_about_subtitle">Versión de la app e información legal</string>
-
-    <string name="settings_section_legal_title">Terminos y Privacidad</string>
-    <string name="settings_section_legal_subtitle">Consulta los términos y condiciones y el aviso de privacidad.</string>
-
-    <string name="settings_footer_disclaimer">Solo tú puedes ver la configuración. También puedes revisar la configuración de los servicios y otras aplicaciones de AppSuite que uses. SunShine AppSuite protege la privacidad y la seguridad de tus datos.</string>
-
-    <string name="update_core_title">Actualización de AppSuite</string>
-    <string name="update_core_subtitle_latest">Tienes la versión más reciente instalada.</string>
-    <string name="update_modules_title">Actualización de módulos</string>
-    <string name="update_modules_subtitle">Revisa si hay componentes internos por actualizar.</string>
-    <string name="update_core_message_latest_version">AppSuite está actualizado (v%1$s)</string>
-
-    <string name="apps_title">Apps - módulos AppSuite</string>
 
     <string name="home_section_functions_subtitle">Funciones</string>
-    <string name="home_section_functions_assistant">Abrir asistente</string>
-    <string name="home_section_functions_orders">Ver ordenes</string>
-    <string name="home_section_functions_appointments">Agendar citas</string>
-    <string name="home_section_functions_tows">Ingreso de grúa</string>
-
-    <string name="support_cd_logo">Logotipo de AppSuite</string>
-    <string name="support_cd_expand">Mostrar u ocultar sección</string>
-    <string name="support_cd_open">Abrir enlace</string>
-    <string name="support_cd_community">Comunidad de ayuda de AppSuite</string>
-    <string name="support_title">¿En qué podemos ayudarte?</string>
-    <string name="support_search_hint">Describe tu problema en AppSuite</string>
-    <string name="support_explore_title">Explora los temas de ayuda</string>
-    <string name="support_topic_popular">Artículos populares</string>
-    <string name="support_topic_troubleshoot">Solución de problemas</string>
-    <string name="support_topic_config">Configuración</string>
-    <string name="support_popular_1">Cómo recuperar acceso (PIN, biométrico y sesión)</string>
-    <string name="support_popular_2">Permisos y privacidad (cámara, ubicación y notificaciones)</string>
-    <string name="support_popular_3">Notificaciones de estado (citas, tracker y actualizaciones)</string>
-    <string name="support_trouble_1">No puedo iniciar sesión o me pide desbloqueo</string>
-    <string name="support_trouble_2">La app se cierra, se queda cargando o no abre</string>
-    <string name="support_config_1">Cuenta, permisos y seguridad</string>
-    <string name="support_need_more_title">¿Necesitas más ayuda?</string>
-    <string name="support_need_more_subtitle">Prueba estos próximos pasos:</string>
-    <string name="support_community_title">Publicar en la comunidad de AppSuite</string>
-    <string name="support_community_subtitle">Obtén respuestas de otros usuarios y del equipo</string>
-    <string name="support_url_popular_1">https://support.sunshineappsuite.com/articles/acceso</string>
-    <string name="support_url_popular_2">https://support.sunshineappsuite.com/articles/permisos-y-privacidad</string>
-    <string name="support_url_popular_3">https://support.sunshineappsuite.com/articles/notificaciones</string>
-    <string name="support_url_trouble_1">https://support.sunshineappsuite.com/troubleshoot/login</string>
-    <string name="support_url_trouble_2">https://support.sunshineappsuite.com/troubleshoot/crash</string>
-    <string name="support_url_config_1">https://support.sunshineappsuite.com/docs/configuracion</string>
-    <string name="support_url_community">https://support.sunshineappsuite.com/community</string>
-
-    <string name="legal_terms_cd_header_art">Ilustración de condiciones del servicio</string>
-    <string name="legal_terms_doc_title">Condiciones del Servicio</string>
-    <string name="legal_terms_effective_date">En vigencia a partir del 01 de enero de 2026</string>
-    <string name="legal_terms_full_version_hint">Versión completa y actualizada: https://policies.sunshineappsuite.com/terms</string>
-    <string name="legal_terms_link_download_pdf">Descargar PDF</string>
-    <string name="legal_terms_section_covered_title">Qué cubren estas condiciones</string>
-    <string name="legal_terms_section_covered_body">Es tentador saltarse estas condiciones, pero aquí se define qué puedes esperar de los servicios de AppSuite y qué se espera de ti. También explican cómo se configura tu relación con AppSuite cuando accedes o usas sus servicios.</string>
-    <string name="legal_terms_section_covered_bullets">• Lo que puedes esperar de AppSuite: cómo brindan y cómo evolucionan sus servicios.\n• Lo que AppSuite espera de ti: reglas básicas para usar los servicios.\n• Contenido en los servicios: derechos de propiedad intelectual sobre lo que aparece y se comparte.\n• Problemas o desacuerdos: derechos legales y posibles consecuencias si se incumplen condiciones.</string>
-    <string name="legal_terms_section_acceptance_note">Acceder o usar los servicios implica que aceptas estas condiciones.</string>
-    <string name="legal_terms_section_privacy_note">Además, AppSuite publica una Política de Privacidad (no forma parte de estas condiciones) que ayuda a entender cómo puedes actualizar, administrar, exportar y borrar tu información.</string>
-    <string name="legal_terms_section_conditions_title">Condiciones</string>
-    <string name="legal_terms_section_provider_title">Proveedor de servicios</string>
-    <string name="legal_terms_section_provider_body">El proveedor de los servicios (y con quien celebras este acuerdo) es SunShine AppSuite (en adelante, “AppSuite”), con domicilio en Monterrey, Nuevo León, México.\n\nLa prestación de los servicios se rige por las leyes de los Estados Unidos Mexicanos y, cuando resulte aplicable, por el Código de Comercio (mensajes de datos y contratación electrónica), la Ley Federal de Protección al Consumidor y la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.\n\nPara cualquier controversia relacionada con estos servicios, las partes se someten a la jurisdicción de los tribunales competentes de Monterrey, Nuevo León, México.</string>
-    <string name="legal_terms_section_age_title">Requisitos de edad</string>
-    <string name="legal_terms_section_age_body">Si no cumples con la edad requerida para administrar tu propia Cuenta de AppSuite, necesitas permiso de tu madre, padre o tutor legal para usar una Cuenta de AppSuite. Pídeles que lean estas condiciones contigo.\n\nSi eres madre, padre o tutor legal y permites que un menor use los servicios, estas condiciones también aplican para ti y eres responsable de su actividad.\n\nAlgunos servicios pueden tener requisitos de edad adicionales en sus políticas o condiciones específicas.</string>
-    <string name="legal_terms_section_relationship_title">Su relación con AppSuite</string>
-    <string name="legal_terms_section_relationship_body">Estas condiciones ayudan a definir tu relación con AppSuite. Cuando se menciona “AppSuite”, “nosotros” o “nuestro”, se refiere a SunShine AppSuite y sus afiliadas. En términos generales, puedes acceder y usar los servicios si aceptas cumplir con estas condiciones.</string>
-    <string name="legal_terms_section_expect_title">Lo que puede esperar de nosotros</string>
-    <string name="legal_terms_section_services_title">Proporcionar una amplia variedad de servicios útiles</string>
-    <string name="legal_terms_section_services_body">AppSuite ofrece distintos tipos de servicios sujetos a estas condiciones, por ejemplo: apps y sitios; plataformas; servicios integrados dentro de apps o sitios de otras empresas; y dispositivos.\n\nMuchos servicios incluyen contenido con el que puedes interactuar o que puedes reproducir.\n\nLos servicios están diseñados para funcionar en conjunto y facilitarte cambiar de actividad (por ejemplo, desde un registro de ingreso por grua, hasta el rastreo de unidad y toma de fotografías).</string>
-    <string name="legal_terms_url">https://policies.google.com/terms</string>
-    <string name="legal_footer">%1$s • v%2$s</string>
-    <string name="legal_footer_placeholder">AppSuite • v0.0.0</string>
 
     <string name="no_internet_title">Sin conexión</string>
     <string name="no_internet_message">No detectamos una conexión a internet. Conéctate para continuar usando AppSuite.</string>
@@ -379,7 +109,6 @@
     <string name="qr_scanner_ot_sheet_tow_entry">Ingreso por grúa</string>
 
     <string name="work_order_details_title">Detalle de la OT</string>
-    <string name="work_order_detail_os">Abrir orden de servicio</string>
     <string name="work_order_detail_actions_client_data">Ver datos del cliente</string>
     <string name="work_order_data_title">Datos generales</string>
     <string name="work_order_client_data_title">Datos del cliente</string>

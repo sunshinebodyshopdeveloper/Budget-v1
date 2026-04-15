@@ -15,47 +15,26 @@
     <!-- 🎨 Paleta Google -->
     <color name="google_blue">#4285F4</color>
     <color name="google_green">#34A853</color>
-    <color name="google_yellow">#FBBC05</color>
-    <color name="google_red">#EA4335</color>
-    <color name="google_orange">#E37400</color>
-    <color name="google_purple">#9D00FF</color>
-    <color name="google_background">#F3F3F3</color>
     <color name="google_white">#FFFFFF</color>
-    <color name="google_dark">#757575</color>
     <color name="google_black">#000000</color>
-    <color name="google_blue_light">#D3E3FD</color>
     <color name="google_background_surface">#E5ECF6</color>
     <color name="google_background_card">#F8F9FE</color>
     <color name="google_background_settings">#F0F3F8</color>
-    <color name="google_icons">#001C34</color>
-    <color name="google_button_state">#E9EDF6</color>
-    <color name="google_icons_state">#201F24</color>
     <!-- Secondary / Outlined (Light) -->
     <color name="google_text_secondary">#5F6368</color>
-    <color name="google_security_green_light">#E6F4EA</color>
     <color name="google_line">#DADCE0</color>
     <color name="google_divider">#E0E0E0</color>
     <color name="google_text_hint">#9AA0A6</color>
-
-    <color name="apps_chip_installed_bg">#E0F7EC</color>
-    <color name="apps_chip_installed_text">#1B5E20</color>
-    <color name="apps_chip_not_installed_bg">#ECEFF1</color>
-    <color name="apps_chip_not_installed_text">#455A64</color>
 
     <!-- Colores específicos de onboarding (puedes ajustarlos luego) -->
     <color name="onboarding_bg_1">@color/google_blue</color>
 
     <!-- Components -->
-    <color name="menu_chip_bg_selected">#E0F2FF</color>
     <color name="menu_button_icon">#5F6368</color>
 
     <!-- PIN específico -->
-    <color name="pin_dot_empty">#FFE0E0E0</color>
-    <color name="pin_dot_filled">#FF202124</color>
-    <color name="pin_key_ripple">#33202124</color>
 
     <!-- Home colors -->
-    <color name="home_card_select_bg">#C9E5FC</color>
 
     <!-- Cards Tracking -->
 
@@ -63,20 +42,10 @@
     <color name="home_blue_light">#C2E7FF</color>
     <color name="home_yellow_light">#FFE083</color>
     <color name="home_green_light">#B1F2B4</color>
-    <color name="home_red_light">#FFDBCD</color>
-    <color name="home_purple_light">#E1D5FE</color>
     <color name="home_orange_light">#FFCC99</color>
     <color name="home_pink_light">#FFD1E8</color>
 
     <!--Quick Actions -->
-
-    <color name="gray_container">#F5FAFD</color>
-
-    <color name="blue_container">#D4F3FD</color>
-    <color name="blue_icon">#375D73</color>
-
-    <color name="functions_container">#E6F2FE</color>
-    <color name="functions_surface_secondary_icon">#0C1D25</color>
 
     <!-- Appointments palette Colors -->
 

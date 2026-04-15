@@ -8,13 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.lifecycleScope
-import com.google.android.material.card.MaterialCardView
 import com.sunshine.appsuite.budget.databinding.ActivityMainBinding
-import com.sunshine.appsuite.budget.settings.security.SecurityAdvisoryNotifier
 import com.sunshine.appsuite.budget.system.network.NetworkUtils
 import com.sunshine.appsuite.budget.system.network.NoInternetActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.sunshine.appsuite.budget.user.ui.ProfileBottomSheetDialog
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -35,7 +32,6 @@ class MainActivity : AppCompatActivity(){
 
         super.onCreate(savedInstanceState)
 
-        // Si no hay internet: nos vamos y ya (sin montar UI)
         if (!NetworkUtils.isOnline(this)) {
             startActivity(Intent(this, NoInternetActivity::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
@@ -44,7 +40,6 @@ class MainActivity : AppCompatActivity(){
             return
         }
 
-        // Arranque sin UI custom: resolvemos lógica y luego mostramos UI real
         lifecycleScope.launch {
 
             // Token
@@ -54,7 +49,6 @@ class MainActivity : AppCompatActivity(){
                 return@launch
             }
 
-            // Ya puede ver el home → montamos la UI real
             showMainUi(savedInstanceState)
         }
 
@@ -63,9 +57,6 @@ class MainActivity : AppCompatActivity(){
 
     override fun onResume() {
         super.onResume()
-        if (isMainUiShown) {
-            SecurityAdvisoryNotifier.maybeShow(this)
-        }
     }
 
     // ------------------------
@@ -79,7 +70,6 @@ class MainActivity : AppCompatActivity(){
         setupSystemBars()
 
         isMainUiShown = true
-        SecurityAdvisoryNotifier.maybeShow(this)
     }
 
     private fun setupSystemBars() {
