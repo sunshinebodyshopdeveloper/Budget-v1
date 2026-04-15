@@ -1,6 +1,6 @@
 package com.sunshine.appsuite.budget.orders.timeline
 
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.orders.data.OrderDto
 import java.text.Normalizer
 import java.text.SimpleDateFormat

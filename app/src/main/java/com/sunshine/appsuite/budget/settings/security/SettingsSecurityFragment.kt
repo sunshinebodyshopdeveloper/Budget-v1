@@ -15,8 +15,8 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
-import com.sunshine.appsuite.R
-import com.sunshine.appsuite.databinding.FragmentSettingsSecurityBinding
+import com.sunshine.appsuite.budget.R
+import com.sunshine.appsuite.budget.databinding.FragmentSettingsSecurityBinding
 
 class SettingsSecurityFragment : Fragment() {
 

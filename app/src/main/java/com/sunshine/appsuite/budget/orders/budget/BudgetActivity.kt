@@ -11,8 +11,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sunshine.appsuite.R
-import com.sunshine.appsuite.databinding.ActivityBudgetBinding
+import com.sunshine.appsuite.budget.R
+import com.sunshine.appsuite.budget.databinding.ActivityBudgetBinding
 
 /**
  * Actividad para la gestión de presupuestos.

@@ -11,10 +11,10 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.fragment.app.Fragment
-import com.sunshine.appsuite.budget.AppSuiteApp
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.BudgetApp
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.user.ui.ProfileBottomSheetDialog
-import com.sunshine.appsuite.databinding.FragmentSettingsHomeBinding
+import com.sunshine.appsuite.budget.databinding.FragmentSettingsHomeBinding
 import com.sunshine.appsuite.budget.menu.ProfileMenuListener
 import com.sunshine.appsuite.budget.settings.apps.AppsActivity
 import com.sunshine.appsuite.budget.settings.account.PasswordActivity
@@ -75,7 +75,7 @@ class SettingsHomeFragment : Fragment() {
             setupCookieShape(binding.ivAvatar)
         }
 
-        val app = requireActivity().application as AppSuiteApp
+        val app = requireActivity().application as BudgetApp
         val store = app.userProfileStore
 
         // UI reactiva: se actualiza sola cuando cambie el perfil

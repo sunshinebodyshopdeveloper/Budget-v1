@@ -1,6 +1,6 @@
 package com.sunshine.appsuite.budget.user
 
-import com.sunshine.appsuite.BuildConfig
+import com.sunshine.appsuite.budget.BuildConfig
 import com.sunshine.appsuite.budget.data.network.UserResponse
 import com.sunshine.appsuite.budget.user.model.UserProfile
 

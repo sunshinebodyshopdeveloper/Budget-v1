@@ -23,12 +23,12 @@ import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.data.network.ApiClient
 import com.sunshine.appsuite.budget.orders.budget.BudgetActivity
 import com.sunshine.appsuite.budget.orders.data.OrdersApi
 import com.sunshine.appsuite.budget.security.TokenManager
-import com.sunshine.appsuite.databinding.ActivityQrScannerBinding
+import com.sunshine.appsuite.budget.databinding.ActivityQrScannerBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch

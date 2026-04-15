@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.sunshine.appsuite.budget.AppSuiteApp
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.BudgetApp
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.settings.SettingsNavigator
 import com.sunshine.appsuite.budget.user.ui.AvatarImageLoader
-import com.sunshine.appsuite.databinding.FragmentSettingsAccountBinding
+import com.sunshine.appsuite.budget.databinding.FragmentSettingsAccountBinding
 import kotlinx.coroutines.launch
 
 class SettingsAccountFragment : Fragment() {
@@ -57,7 +57,7 @@ class SettingsAccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val app = requireActivity().application as AppSuiteApp
+        val app = requireActivity().application as BudgetApp
         val store = app.userProfileStore
 
         setupClickListeners()

@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.*
 import androidx.lifecycle.*
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.assistant.data.AssistantApiService
 import com.sunshine.appsuite.budget.assistant.domain.GeminiAssistantManager
 import com.sunshine.appsuite.budget.assistant.ui.AssistantAdapter
@@ -19,7 +19,7 @@ import com.sunshine.appsuite.budget.assistant.ui.PopItemAnimator
 import com.sunshine.appsuite.budget.data.network.ApiClient
 import com.sunshine.appsuite.budget.data.network.UserApi
 import com.sunshine.appsuite.budget.security.TokenManager
-import com.sunshine.appsuite.databinding.ActivityAssistantBinding
+import com.sunshine.appsuite.budget.databinding.ActivityAssistantBinding
 import kotlinx.coroutines.launch
 import kotlin.math.max
 

@@ -4,7 +4,7 @@ import android.view.MenuItem
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 
 class MainDrawerController(
     private val drawerLayout: DrawerLayout,

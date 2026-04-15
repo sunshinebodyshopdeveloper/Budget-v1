@@ -11,16 +11,16 @@ import androidx.core.view.WindowCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.sunshine.appsuite.budget.AppSuiteApp
+import com.sunshine.appsuite.budget.BudgetApp
 import com.sunshine.appsuite.budget.LoginActivity
-import com.sunshine.appsuite.R
-import com.sunshine.appsuite.databinding.ActivityOnboardingBinding
+import com.sunshine.appsuite.budget.R
+import com.sunshine.appsuite.budget.databinding.ActivityOnboardingBinding
 import kotlin.math.abs
 
 class OnboardingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityOnboardingBinding
-    private val app by lazy { application as AppSuiteApp }
+    private val app by lazy { application as BudgetApp }
 
     private lateinit var adapter: OnboardingAdapter
 

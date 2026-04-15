@@ -11,8 +11,8 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.shape.CornerFamily
-import com.sunshine.appsuite.R
-import com.sunshine.appsuite.databinding.ItemChatMessageBinding
+import com.sunshine.appsuite.budget.R
+import com.sunshine.appsuite.budget.databinding.ItemChatMessageBinding
 
 class AssistantAdapter : RecyclerView.Adapter<AssistantAdapter.ChatViewHolder>() {
 

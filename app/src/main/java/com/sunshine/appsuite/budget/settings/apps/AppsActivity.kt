@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sunshine.appsuite.R
-import com.sunshine.appsuite.databinding.FragmentSettingsAppsBinding
+import com.sunshine.appsuite.budget.R
+import com.sunshine.appsuite.budget.databinding.FragmentSettingsAppsBinding
 import java.io.File
 import kotlin.collections.forEach
 

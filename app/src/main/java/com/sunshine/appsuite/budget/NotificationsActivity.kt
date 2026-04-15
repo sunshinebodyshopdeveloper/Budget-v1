@@ -7,7 +7,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import com.google.android.material.R
 import com.google.android.material.color.MaterialColors
-import com.sunshine.appsuite.databinding.ActivityNotificationsBinding
+import com.sunshine.appsuite.budget.databinding.ActivityNotificationsBinding
 
 class NotificationsActivity : AppCompatActivity() {
 
@@ -29,7 +29,7 @@ class NotificationsActivity : AppCompatActivity() {
         val surfaceColor = MaterialColors.getColor(
             this,
             R.attr.colorSurface,
-            ContextCompat.getColor(this, com.sunshine.appsuite.R.color.google_white)
+            ContextCompat.getColor(this, com.sunshine.appsuite.budget.R.color.google_white)
         )
 
         window.statusBarColor = surfaceColor
@@ -47,7 +47,7 @@ class NotificationsActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
-            title = getString(com.sunshine.appsuite.R.string.about_title)
+            title = getString(com.sunshine.appsuite.budget.R.string.about_title)
         }
 
         binding.toolbar.setNavigationOnClickListener {
@@ -56,11 +56,11 @@ class NotificationsActivity : AppCompatActivity() {
     }
 
     private fun setupContent() {
-        binding.tvAppName.text = getString(com.sunshine.appsuite.R.string.app_name)
+        binding.tvAppName.text = getString(com.sunshine.appsuite.budget.R.string.app_name)
 
         val versionName = BuildConfig.VERSION_NAME
-        binding.tvVersion.text = getString(com.sunshine.appsuite.R.string.about_version_text, versionName)
+        binding.tvVersion.text = getString(com.sunshine.appsuite.budget.R.string.about_version_text, versionName)
 
-        binding.tvFooter.text = getString(com.sunshine.appsuite.R.string.about_footer)
+        binding.tvFooter.text = getString(com.sunshine.appsuite.budget.R.string.about_footer)
     }
 }

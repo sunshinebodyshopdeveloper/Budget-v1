@@ -7,10 +7,10 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.tools.appointments.AppointmentType
 import com.sunshine.appsuite.budget.tools.appointments.ui.model.AppointmentUi
-import com.sunshine.appsuite.databinding.ItemAppointmentsBinding
+import com.sunshine.appsuite.budget.databinding.ItemAppointmentsBinding
 import java.text.Normalizer
 
 class AppointmentsAdapter(

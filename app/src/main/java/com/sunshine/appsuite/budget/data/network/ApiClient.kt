@@ -1,6 +1,6 @@
 package com.sunshine.appsuite.budget.data.network
 
-import com.sunshine.appsuite.BuildConfig
+import com.sunshine.appsuite.budget.BuildConfig
 import com.sunshine.appsuite.budget.security.TokenManager
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

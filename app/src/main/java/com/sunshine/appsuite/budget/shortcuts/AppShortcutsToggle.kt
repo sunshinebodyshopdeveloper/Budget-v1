@@ -7,7 +7,7 @@ import android.content.pm.ShortcutInfo
 import android.content.pm.ShortcutManager
 import android.graphics.drawable.Icon
 import android.net.Uri
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 
 object AppShortcutsToggle {
 

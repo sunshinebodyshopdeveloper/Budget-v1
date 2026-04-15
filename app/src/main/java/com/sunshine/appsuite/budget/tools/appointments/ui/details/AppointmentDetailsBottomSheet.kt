@@ -17,15 +17,15 @@ import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.sunshine.appsuite.budget.AppSuiteApp
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.BudgetApp
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.tools.appointments.data.network.AppointmentsApi
 import com.sunshine.appsuite.budget.tools.appointments.data.remote.model.AppointmentDto
 import com.sunshine.appsuite.budget.tools.appointments.data.repository.AppointmentsRepository
 import com.sunshine.appsuite.budget.tools.appointments.ui.edit.EditAppointmentActivity
 import com.sunshine.appsuite.budget.tools.appointments.ui.mapper.AppointmentMapper
 import com.sunshine.appsuite.budget.tools.appointments.ui.model.AppointmentUi
-import com.sunshine.appsuite.databinding.BottomSheetAppointmentDetailsBinding
+import com.sunshine.appsuite.budget.databinding.BottomSheetAppointmentDetailsBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -107,7 +107,7 @@ class AppointmentDetailsBottomSheet : BottomSheetDialogFragment() {
     }
 
     private fun buildRepo(): AppointmentsRepository? {
-        val app = requireActivity().application as? AppSuiteApp ?: return null
+        val app = requireActivity().application as? BudgetApp ?: return null
         val api = app.retrofit.create(AppointmentsApi::class.java)
         return AppointmentsRepository(api)
     }

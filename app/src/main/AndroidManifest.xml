@@ -24,7 +24,7 @@
     </queries>
 
     <application
-        android:name=".budget.AppSuiteApp"
+        android:name=".BudgetApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:enableOnBackInvokedCallback="true"
@@ -36,12 +36,12 @@
         android:theme="@style/Theme.AppSuite"
         tools:targetApi="31">
         <activity
-            android:name=".budget.orders.budget.BudgetActivity"
+            android:name=".orders.budget.BudgetActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"/>
         <activity
-            android:name=".budget.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,82 +50,82 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".budget.settings.system.wallpaper.ui.WallpaperActivity"
+            android:name=".settings.system.wallpaper.ui.WallpaperActivity"
             android:exported="false"
             android:hardwareAccelerated="true" />
         <activity
-            android:name=".budget.assistant.AssistantActivity"
+            android:name=".assistant.AssistantActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name=".budget.orders.ServiceOrderActivity"
+            android:name=".orders.ServiceOrderActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.orders.ServiceOrderDetailActivity"
+            android:name=".orders.ServiceOrderDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.tools.qr.QrScannerActivity"
+            android:name=".tools.qr.QrScannerActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.tools.qr.SmartScannerActivity"
+            android:name=".tools.qr.SmartScannerActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.tools.appointments.AppointmentsActivity"
+            android:name=".tools.appointments.AppointmentsActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.tools.appointments.ui.create.CreateAppointmentActivity"
+            android:name=".tools.appointments.ui.create.CreateAppointmentActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.tools.appointments.ui.edit.EditAppointmentActivity"
+            android:name=".tools.appointments.ui.edit.EditAppointmentActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.system.network.NoInternetActivity"
+            android:name=".system.network.NoInternetActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.update.UpdateActivity"
+            android:name=".update.UpdateActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.legal.LegalActivity"
+            android:name=".legal.LegalActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.settings.apps.AppsActivity"
+            android:name=".settings.apps.AppsActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.settings.security.AppLockActivity"
+            android:name=".settings.security.AppLockActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".budget.settings.account.PasswordActivity"
+            android:name=".settings.account.PasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.settings.account.ProfilePhotoActivity"
+            android:name=".settings.account.ProfilePhotoActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.NotificationsActivity"
+            android:name=".NotificationsActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.settings.SettingsActivity"
+            android:name=".settings.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.legal.AboutActivity"
+            android:name=".legal.AboutActivity"
             android:exported="false" />
         <activity
-            android:name=".budget.shortcuts.ShortcutRouterActivity"
+            android:name=".shortcuts.ShortcutRouterActivity"
             android:excludeFromRecents="true"
             android:exported="true"
             android:noHistory="true"
             android:theme="@style/Theme.AppSuite.Transparent" />
         <activity
-            android:name=".budget.onboarding.OnboardingActivity"
+            android:name=".onboarding.OnboardingActivity"
             android:exported="true"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".budget.LoginActivity"
+            android:name=".LoginActivity"
             android:exported="false" />
 
         <receiver
-            android:name=".budget.settings.security.SecurityAdvisoryReceiver"
+            android:name=".settings.security.SecurityAdvisoryReceiver"
             android:exported="false" />
 
         <provider

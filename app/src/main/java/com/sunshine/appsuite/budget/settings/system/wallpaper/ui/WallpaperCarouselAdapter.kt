@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.sunshine.appsuite.databinding.ItemWallpaperBinding
+import com.sunshine.appsuite.budget.databinding.ItemWallpaperBinding
 
 class WallpaperCarouselAdapter(
     private val onWallpaperSelected: (String) -> Unit,

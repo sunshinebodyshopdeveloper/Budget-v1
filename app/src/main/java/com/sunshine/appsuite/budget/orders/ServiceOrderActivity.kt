@@ -15,14 +15,14 @@ import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.color.MaterialColors
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.data.network.ApiClient
 import com.sunshine.appsuite.budget.orders.data.ServiceOrderListItemDto
 import com.sunshine.appsuite.budget.orders.data.ServiceOrdersApi
 import com.sunshine.appsuite.budget.orders.repository.ServiceOrderRepository
 import com.sunshine.appsuite.budget.security.TokenManager
 import com.sunshine.appsuite.budget.tools.qr.QrScannerActivity
-import com.sunshine.appsuite.databinding.ActivityServiceOrderBinding
+import com.sunshine.appsuite.budget.databinding.ActivityServiceOrderBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch

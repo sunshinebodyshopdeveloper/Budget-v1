@@ -14,7 +14,7 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.sunshine.appsuite.databinding.FragmentSettingsPermissionsBinding
+import com.sunshine.appsuite.budget.databinding.FragmentSettingsPermissionsBinding
 
 class SettingsPermissionsFragment : Fragment() {
 

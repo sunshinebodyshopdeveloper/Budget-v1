@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import com.sunshine.appsuite.R
-import com.sunshine.appsuite.databinding.ActivityPasswordBinding
+import com.sunshine.appsuite.budget.R
+import com.sunshine.appsuite.budget.databinding.ActivityPasswordBinding
 
 class PasswordActivity : AppCompatActivity() {
 

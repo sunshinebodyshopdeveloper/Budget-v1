@@ -10,9 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sunshine.appsuite.budget.AppSuiteApp
-import com.sunshine.appsuite.R
-import com.sunshine.appsuite.databinding.FragmentHomeBinding
+import com.sunshine.appsuite.budget.BudgetApp
+import com.sunshine.appsuite.budget.R
+import com.sunshine.appsuite.budget.databinding.FragmentHomeBinding
 import com.sunshine.appsuite.budget.home.data.HomeSectionRepository
 import com.sunshine.appsuite.budget.home.model.HomeSection
 import com.sunshine.appsuite.budget.home.ui.adapter.HomeSectionsAdapter
@@ -87,7 +87,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupAppointmentsSection() {
-        val app = requireActivity().application as AppSuiteApp
+        val app = requireActivity().application as BudgetApp
         val api = app.retrofit.create(AppointmentsApi::class.java)
         appointmentsRepo = AppointmentsRepository(api)
 
@@ -100,7 +100,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupTrackingSection() {
-        val app = requireActivity().application as AppSuiteApp
+        val app = requireActivity().application as BudgetApp
         val api = app.retrofit.create(OrdersStatsApi::class.java)
         trackingRepo = OrdersStatsRepository(api)
 

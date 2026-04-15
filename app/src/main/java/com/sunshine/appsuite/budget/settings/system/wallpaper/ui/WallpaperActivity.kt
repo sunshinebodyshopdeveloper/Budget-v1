@@ -10,11 +10,11 @@ import androidx.core.view.WindowCompat
 import com.google.android.material.carousel.CarouselLayoutManager
 import com.google.android.material.carousel.CarouselSnapHelper
 import com.google.android.material.carousel.MultiBrowseCarouselStrategy
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.settings.system.wallpaper.WallpaperConstants
 import com.sunshine.appsuite.budget.settings.system.wallpaper.WallpaperHelper
 import com.sunshine.appsuite.budget.settings.system.wallpaper.WallpaperMode
-import com.sunshine.appsuite.databinding.FragmentSettingsWallpaperBinding
+import com.sunshine.appsuite.budget.databinding.FragmentSettingsWallpaperBinding
 
 class WallpaperActivity : AppCompatActivity() {
 

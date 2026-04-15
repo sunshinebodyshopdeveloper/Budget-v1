@@ -2,8 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.android.secrets)
-    id("com.google.gms.google-services")
-    alias(libs.plugins.firebase.appdistribution)
 }
 
 android {
@@ -82,13 +80,6 @@ dependencies {
     implementation(libs.androidx.swiperefreshlayout)
     implementation(libs.androidx.work.runtime.ktx)
     implementation(libs.androidx.graphics.shapes)
-
-    // Import the Firebase BoM
-    implementation(platform(libs.firebase.bom))
-
-    // TODO: Add the dependencies for Firebase products you want to use
-    // When using the BoM, don't specify versions in Firebase dependencies
-    implementation(libs.firebase.analytics)
 
     // SplashScreen
     implementation(libs.androidx.core.splashscreen)

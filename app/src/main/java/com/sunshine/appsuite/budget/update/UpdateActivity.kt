@@ -10,8 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
-import com.sunshine.appsuite.R
-import com.sunshine.appsuite.databinding.ActivityUpdateBinding
+import com.sunshine.appsuite.budget.R
+import com.sunshine.appsuite.budget.databinding.ActivityUpdateBinding
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit

@@ -11,8 +11,8 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sunshine.appsuite.budget.AppSuiteApp
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.BudgetApp
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.tools.appointments.data.network.AppointmentsApi
 import com.sunshine.appsuite.budget.tools.appointments.data.remote.model.AppointmentDto
 import com.sunshine.appsuite.budget.tools.appointments.data.repository.AppointmentsRepository
@@ -22,7 +22,7 @@ import com.sunshine.appsuite.budget.tools.appointments.ui.details.AppointmentDet
 import com.sunshine.appsuite.budget.tools.appointments.ui.mapper.AppointmentMapper
 import com.sunshine.appsuite.budget.tools.appointments.ui.model.AppointmentUi
 import com.sunshine.appsuite.budget.tools.appointments.util.AppointmentNotificationHelper
-import com.sunshine.appsuite.databinding.ActivityAppointmentsBinding
+import com.sunshine.appsuite.budget.databinding.ActivityAppointmentsBinding
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -98,7 +98,7 @@ class AppointmentsActivity : AppCompatActivity() {
     }
 
     private fun setupRepository() {
-        val app = application as AppSuiteApp
+        val app = application as BudgetApp
         val api = app.retrofit.create(AppointmentsApi::class.java)
         repo = AppointmentsRepository(api)
     }

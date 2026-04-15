@@ -14,7 +14,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import com.sunshine.appsuite.budget.MainActivity
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 
 object ShortcutsNotifier {
 

@@ -3,7 +3,7 @@ package com.sunshine.appsuite.budget.assistant.domain
 import android.util.Log
 import com.google.ai.client.generativeai.GenerativeModel
 import com.google.ai.client.generativeai.type.*
-import com.sunshine.appsuite.BuildConfig
+import com.sunshine.appsuite.budget.BuildConfig
 import com.sunshine.appsuite.budget.assistant.data.ServiceOrderResponse
 
 class GeminiAssistantManager {

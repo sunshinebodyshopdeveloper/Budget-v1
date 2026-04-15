@@ -16,7 +16,7 @@ import com.sunshine.appsuite.budget.user.UserProfileStore
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 
-class AppSuiteApp : Application() {
+class BudgetApp : Application() {
 
     lateinit var tokenManager: TokenManager
         private set

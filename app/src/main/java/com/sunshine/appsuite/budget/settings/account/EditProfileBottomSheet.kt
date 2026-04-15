@@ -11,9 +11,9 @@ import androidx.core.os.bundleOf
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.sunshine.appsuite.budget.AppSuiteApp
+import com.sunshine.appsuite.budget.BudgetApp
 import com.sunshine.appsuite.budget.user.model.UserProfile
-import com.sunshine.appsuite.databinding.BottomSheetEditProfileBinding
+import com.sunshine.appsuite.budget.databinding.BottomSheetEditProfileBinding
 import kotlinx.coroutines.launch
 
 class EditProfileBottomSheet : BottomSheetDialogFragment() {
@@ -38,7 +38,7 @@ class EditProfileBottomSheet : BottomSheetDialogFragment() {
     private var isBusy = false
 
     private val store by lazy {
-        (requireActivity().application as AppSuiteApp).userProfileStore
+        (requireActivity().application as BudgetApp).userProfileStore
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

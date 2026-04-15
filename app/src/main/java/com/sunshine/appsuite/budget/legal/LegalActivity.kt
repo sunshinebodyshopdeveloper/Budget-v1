@@ -6,9 +6,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
-import com.sunshine.appsuite.BuildConfig
-import com.sunshine.appsuite.R
-import com.sunshine.appsuite.databinding.ActivityLegalBinding
+import com.sunshine.appsuite.budget.BuildConfig
+import com.sunshine.appsuite.budget.R
+import com.sunshine.appsuite.budget.databinding.ActivityLegalBinding
 
 class LegalActivity : AppCompatActivity() {
 

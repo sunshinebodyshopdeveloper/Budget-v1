@@ -1,7 +1,7 @@
 package com.sunshine.appsuite.budget.home.ui.widgets.tracking
 
 import android.view.View
-import com.sunshine.appsuite.databinding.ItemHomeTrackingBinding
+import com.sunshine.appsuite.budget.databinding.ItemHomeTrackingBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

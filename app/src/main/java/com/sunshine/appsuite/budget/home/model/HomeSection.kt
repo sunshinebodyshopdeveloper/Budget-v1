@@ -2,7 +2,7 @@ package com.sunshine.appsuite.budget.home.model
 
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 
 data class HomeSection(
     val id: String,

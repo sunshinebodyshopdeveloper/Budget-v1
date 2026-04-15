@@ -8,7 +8,7 @@ import androidx.annotation.ColorInt
 import androidx.annotation.IdRes
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 
 class OtTimelineRailDecoration(
     context: Context,

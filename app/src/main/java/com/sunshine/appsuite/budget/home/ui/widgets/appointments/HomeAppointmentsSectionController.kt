@@ -13,14 +13,14 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.tools.appointments.AppointmentType
 import com.sunshine.appsuite.budget.tools.appointments.AppointmentsActivity
 import com.sunshine.appsuite.budget.tools.appointments.data.remote.model.AppointmentDto
 import com.sunshine.appsuite.budget.tools.appointments.data.repository.AppointmentsRepository
 import com.sunshine.appsuite.budget.tools.appointments.util.AppointmentNotificationHelper
-import com.sunshine.appsuite.databinding.ItemHomeAppointmentRowBinding
-import com.sunshine.appsuite.databinding.ItemHomeAppointmentsBinding
+import com.sunshine.appsuite.budget.databinding.ItemHomeAppointmentRowBinding
+import com.sunshine.appsuite.budget.databinding.ItemHomeAppointmentsBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import java.text.Normalizer

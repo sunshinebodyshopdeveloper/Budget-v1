@@ -18,7 +18,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.card.MaterialCardView
 import com.sunshine.appsuite.budget.assistant.AssistantActivity
-import com.sunshine.appsuite.databinding.ActivityMainBinding
+import com.sunshine.appsuite.budget.databinding.ActivityMainBinding
 import com.sunshine.appsuite.budget.home.ui.HomeFragment
 import com.sunshine.appsuite.budget.legal.AboutActivity
 import com.sunshine.appsuite.budget.legal.LegalActivity
@@ -46,7 +46,6 @@ import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.sunshine.appsuite.R
 import com.sunshine.appsuite.budget.update.UpdateActivity
 import com.sunshine.appsuite.budget.update.UpdateManager
 import com.sunshine.appsuite.budget.update.UpdateResponse
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity(), ProfileMenuListener {
 
     // Binding para la UI REAL (home con drawer + bottom nav)
     private lateinit var binding: ActivityMainBinding
-    private val app by lazy { application as AppSuiteApp }
+    private val app by lazy { application as BudgetApp }
 
     // Bottom nav controller
     private lateinit var bottomNavController: MainBottomNavController
@@ -372,7 +371,7 @@ class MainActivity : AppCompatActivity(), ProfileMenuListener {
     // ------------------------
 
     private fun performLogout() {
-        val app = application as AppSuiteApp
+        val app = application as BudgetApp
         app.tokenManager.clearToken()
         app.userProfileStore.clear()
 

@@ -1,6 +1,6 @@
 <resources>
     <!-- Genéricos -->
-    <string name="app_name">AppSuite</string>
+    <string name="app_name">Presupuestos</string>
     <string name="action_login">Iniciar sesión</string>
     <string name="action_access">Acceder</string>
     <string name="label_username">Usuario</string>

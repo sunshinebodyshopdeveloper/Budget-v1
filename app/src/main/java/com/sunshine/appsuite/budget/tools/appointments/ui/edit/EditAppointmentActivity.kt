@@ -18,14 +18,14 @@ import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.CompositeDateValidator
 import com.google.android.material.datepicker.DateValidatorPointForward
 import com.google.android.material.datepicker.MaterialDatePicker
-import com.sunshine.appsuite.budget.AppSuiteApp
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.BudgetApp
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.tools.appointments.data.network.AppointmentsApi
 import com.sunshine.appsuite.budget.tools.appointments.data.remote.model.AppointmentDto
 import com.sunshine.appsuite.budget.tools.appointments.data.repository.AppointmentsRepository
 import com.sunshine.appsuite.budget.tools.appointments.ui.model.ClientUi
 import com.sunshine.appsuite.budget.tools.appointments.util.WeekdayValidator
-import com.sunshine.appsuite.databinding.ActivityEditAppointmentBinding
+import com.sunshine.appsuite.budget.databinding.ActivityEditAppointmentBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -77,7 +77,7 @@ class EditAppointmentActivity : AppCompatActivity() {
 
         WindowCompat.setDecorFitsSystemWindows(window, true)
 
-        api = (application as AppSuiteApp).retrofit.create(AppointmentsApi::class.java)
+        api = (application as BudgetApp).retrofit.create(AppointmentsApi::class.java)
         repo = AppointmentsRepository(api)
 
         appointmentId = intent.getLongExtra(EXTRA_APPOINTMENT_ID, -1L)

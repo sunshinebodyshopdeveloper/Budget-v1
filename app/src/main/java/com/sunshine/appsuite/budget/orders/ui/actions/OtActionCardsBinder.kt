@@ -9,7 +9,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.annotation.StringRes
 import com.google.android.material.card.MaterialCardView
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 
 object OtActionCardsBinder {
 

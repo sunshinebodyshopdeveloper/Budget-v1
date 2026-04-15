@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.home.model.HomeSection
 import com.sunshine.appsuite.budget.home.ui.touch.HomeSectionsDragStartListener
 import com.sunshine.appsuite.budget.home.ui.touch.HomeSectionsTouchAdapter

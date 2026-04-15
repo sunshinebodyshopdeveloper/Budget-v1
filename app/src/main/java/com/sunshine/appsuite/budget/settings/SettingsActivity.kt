@@ -10,14 +10,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import com.sunshine.appsuite.budget.legal.AboutActivity
-import com.sunshine.appsuite.budget.AppSuiteApp
+import com.sunshine.appsuite.budget.BudgetApp
 import com.sunshine.appsuite.budget.legal.LegalActivity
 import com.sunshine.appsuite.budget.LoginActivity
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.menu.ProfileMenuListener
 import com.sunshine.appsuite.budget.settings.account.SettingsAccountFragment
 import com.sunshine.appsuite.budget.settings.permissions.SettingsPermissionsFragment
-import com.sunshine.appsuite.databinding.ActivitySettingsBinding
+import com.sunshine.appsuite.budget.databinding.ActivitySettingsBinding
 import com.sunshine.appsuite.budget.settings.security.SettingsSecurityFragment
 import com.sunshine.appsuite.budget.settings.support.SettingsSupportFragment
 import com.sunshine.appsuite.budget.settings.system.SettingsSystemFragment
@@ -169,7 +169,7 @@ class SettingsActivity : AppCompatActivity(),
     }
 
     private fun performLogout() {
-        val app = application as AppSuiteApp
+        val app = application as BudgetApp
         app.tokenManager.clearToken()
 
         app.userProfileStore.clear()

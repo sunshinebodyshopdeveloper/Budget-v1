@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.sunshine.appsuite.budget.settings.system.notifications.model.NotificationTopic
-import com.sunshine.appsuite.databinding.ItemNotificationToggleBinding
+import com.sunshine.appsuite.budget.databinding.ItemNotificationToggleBinding
 
 data class NotificationToggleUi(
     val topic: NotificationTopic,

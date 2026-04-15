@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import com.sunshine.appsuite.budget.MainActivity
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 
 class AppLockActivity : AppCompatActivity() {
 

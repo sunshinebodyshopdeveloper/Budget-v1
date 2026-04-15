@@ -6,7 +6,7 @@ import android.content.Context
 import android.view.View
 import android.widget.Toast
 import androidx.annotation.StringRes
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.orders.ui.utils.QrContentExportUtils
 
 object QrContentToolsBinder {

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.sunshine.appsuite.budget.MainActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
-import com.sunshine.appsuite.databinding.ActivityNoInternetBinding
+import com.sunshine.appsuite.budget.databinding.ActivityNoInternetBinding
 
 class NoInternetActivity : AppCompatActivity() {
 
@@ -42,8 +42,8 @@ class NoInternetActivity : AppCompatActivity() {
     }
 
     private fun setupSystemBars() {
-        val status = ContextCompat.getColor(this, com.sunshine.appsuite.R.color.google_background_settings)
-        val nav = ContextCompat.getColor(this, com.sunshine.appsuite.R.color.google_background_settings)
+        val status = ContextCompat.getColor(this, com.sunshine.appsuite.budget.R.color.google_background_settings)
+        val nav = ContextCompat.getColor(this, com.sunshine.appsuite.budget.R.color.google_background_settings)
 
         window.statusBarColor = status
         window.navigationBarColor = nav

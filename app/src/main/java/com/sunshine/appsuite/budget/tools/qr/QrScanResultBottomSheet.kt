@@ -22,7 +22,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.chip.Chip
 import com.squareup.picasso.Picasso
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.orders.ServiceOrderDetailActivity
 import com.sunshine.appsuite.budget.orders.data.OrderDto
 import com.sunshine.appsuite.budget.orders.timeline.OtTimelineAdapter

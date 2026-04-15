@@ -12,9 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.lifecycleScope
-import com.sunshine.appsuite.R
 import com.sunshine.appsuite.budget.data.network.LoginRequest
-import com.sunshine.appsuite.databinding.ActivityLoginBinding
+import com.sunshine.appsuite.budget.databinding.ActivityLoginBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -23,7 +22,7 @@ import retrofit2.HttpException
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
-    private val app: AppSuiteApp get() = application as AppSuiteApp
+    private val app: BudgetApp get() = application as BudgetApp
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -28,7 +28,7 @@ import com.sunshine.appsuite.budget.orders.timeline.OtTimelineAdapter
 import com.sunshine.appsuite.budget.orders.timeline.OtTimelineMapper
 import com.sunshine.appsuite.budget.orders.timeline.OtTimelineRailDecoration
 import com.sunshine.appsuite.budget.security.TokenManager
-import com.sunshine.appsuite.databinding.ActivityServiceOrderDetailBinding
+import com.sunshine.appsuite.budget.databinding.ActivityServiceOrderDetailBinding
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
@@ -132,8 +132,8 @@ class ServiceOrderDetailActivity : AppCompatActivity() {
                 .load(order.coverPhotoUrl) // Ya no es order.coverPhoto?.url
                 .fit()
                 .centerCrop()
-                .placeholder(com.sunshine.appsuite.R.drawable.scrim_gradient_expressive)
-                .error(com.sunshine.appsuite.R.color.google_background_settings)
+                .placeholder(com.sunshine.appsuite.budget.R.drawable.scrim_gradient_expressive)
+                .error(com.sunshine.appsuite.budget.R.color.google_background_settings)
                 .into(binding.ivServiceOrderCover, object : Callback {
                     override fun onSuccess() {
                         // Imagen cargada

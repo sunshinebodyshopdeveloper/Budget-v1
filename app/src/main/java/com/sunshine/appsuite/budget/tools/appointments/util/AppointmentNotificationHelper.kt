@@ -12,7 +12,7 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.settings.system.notifications.data.notificationSettingsDataStore
 import com.sunshine.appsuite.budget.settings.system.notifications.model.NotificationTopic
 import com.sunshine.appsuite.budget.tools.appointments.AppointmentsActivity

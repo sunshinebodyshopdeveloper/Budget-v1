@@ -8,10 +8,10 @@ import androidx.core.view.isVisible
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.settings.system.notifications.data.NotificationSettingsRepository
 import com.sunshine.appsuite.budget.settings.system.notifications.model.NotificationTopic
-import com.sunshine.appsuite.databinding.BottomSheetNotificationControlsBinding
+import com.sunshine.appsuite.budget.databinding.BottomSheetNotificationControlsBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 

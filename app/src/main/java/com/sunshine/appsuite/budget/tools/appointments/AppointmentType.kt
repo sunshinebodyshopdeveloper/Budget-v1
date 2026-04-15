@@ -2,7 +2,7 @@ package com.sunshine.appsuite.budget.tools.appointments
 
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 import java.util.Locale
 
 enum class AppointmentType(

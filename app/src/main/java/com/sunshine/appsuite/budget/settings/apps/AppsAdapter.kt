@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.chip.Chip
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 
 class AppsAdapter(
     private val items: MutableList<AppModule>,

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.sunshine.appsuite.databinding.FragmentAppsBinding
+import com.sunshine.appsuite.budget.databinding.FragmentAppsBinding
 
 class AppsFragment : Fragment() {
 

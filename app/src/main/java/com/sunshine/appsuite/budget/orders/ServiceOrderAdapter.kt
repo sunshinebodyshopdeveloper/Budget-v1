@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.sunshine.appsuite.databinding.ItemServiceOrderRowBinding
+import com.sunshine.appsuite.budget.databinding.ItemServiceOrderRowBinding
 import com.sunshine.appsuite.budget.orders.data.ServiceOrderListItemDto
 import java.util.Locale
 import com.squareup.picasso.Picasso
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 
 class ServiceOrderAdapter(
     private val onClick: (ServiceOrderListItemDto) -> Unit

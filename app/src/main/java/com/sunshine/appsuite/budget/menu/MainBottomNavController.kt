@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.widget.TextViewCompat
 import com.google.android.material.card.MaterialCardView
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 
 class MainBottomNavController(
     rootView: View,

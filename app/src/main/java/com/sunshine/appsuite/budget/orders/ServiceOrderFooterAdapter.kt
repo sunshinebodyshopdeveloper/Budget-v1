@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.progressindicator.CircularProgressIndicator
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.R
 
 class ServiceOrdersFooterAdapter(
     private val onRetry: () -> Unit

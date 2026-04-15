@@ -18,8 +18,8 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.sunshine.appsuite.BuildConfig
-import com.sunshine.appsuite.R
+import com.sunshine.appsuite.budget.BuildConfig
+import com.sunshine.appsuite.budget.R
 import com.sunshine.appsuite.budget.home.data.HomeSectionRepository
 import com.sunshine.appsuite.budget.settings.SettingsHomeFragment
 import com.sunshine.appsuite.budget.settings.appearance.ThemePreferences
@@ -32,7 +32,7 @@ import com.sunshine.appsuite.budget.settings.system.verifications.SystemVerifica
 import com.sunshine.appsuite.budget.settings.system.verifications.SystemVerificationRunner
 import com.sunshine.appsuite.budget.settings.system.wallpaper.ui.WallpaperActivity
 import com.sunshine.appsuite.budget.shortcuts.AppShortcutsToggle
-import com.sunshine.appsuite.databinding.FragmentSettingsSystemBinding
+import com.sunshine.appsuite.budget.databinding.FragmentSettingsSystemBinding
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 

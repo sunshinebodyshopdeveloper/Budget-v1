@@ -14,9 +14,9 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.sunshine.appsuite.budget.AppSuiteApp
-import com.sunshine.appsuite.R
-import com.sunshine.appsuite.databinding.ActivityProfilePhotoBinding
+import com.sunshine.appsuite.budget.BudgetApp
+import com.sunshine.appsuite.budget.R
+import com.sunshine.appsuite.budget.databinding.ActivityProfilePhotoBinding
 import com.sunshine.appsuite.budget.user.ui.AvatarImageLoader
 import kotlinx.coroutines.launch
 import java.io.File
@@ -36,7 +36,7 @@ class ProfilePhotoActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfilePhotoBinding
 
-    private val app by lazy { application as AppSuiteApp }
+    private val app by lazy { application as BudgetApp }
     private val store by lazy { app.userProfileStore }
 
     private var selectedImageUri: Uri? = null
