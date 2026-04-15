@@ -55,26 +55,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".orders.budget.BudgetActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize"/>
-
-        <activity
-            android:name=".orders.ServiceOrderActivity"
-            android:exported="false" />
-        <activity
-            android:name=".orders.ServiceOrderDetailActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".tools.qr.QrScannerActivity"
-            android:exported="false" />
         <activity
             android:name=".tools.qr.SmartScannerActivity"
             android:exported="false" />
-
         <activity
             android:name=".system.network.NoInternetActivity"
             android:exported="false" />
@@ -95,6 +82,5 @@
         <meta-data
             android:name="com.google.mlkit.vision.DEPENDENCIES"
             android:value="barcode,ocr" />
-
     </application>
 </manifest>

@@ -6,6 +6,55 @@
     <!-- ===================== -->
 
     <!-- MenuProfile -->
+    <style name="ProfileRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="ProfileIcon">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:tint">@color/google_icons</item>
+    </style>
+
+    <style name="ProfileLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/google_icons</item>
+    </style>
+
+    <style name="SupportRow">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="SupportLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/google_dark</item>
+    </style>
 
     <!-- ===================== -->
     <!-- ALIASES “NATIVOS” M3E -->
@@ -14,11 +63,185 @@
          Así te compila todo igual, pero se ve Expressive “stock”. -->
 
     <style name="AppSuite.Button.Primary" parent="Widget.Material3Expressive.Button" />
+    <style name="AppSuite.Button.Secondary" parent="Widget.Material3Expressive.Button.OutlinedButton" />
 
     <style name="Widget.AppSuite.BottomSheet.DragHandle" parent="Widget.Material3.BottomSheet.DragHandle" />
+
+    <style name="Text.AppSuite.ScreenTitle" parent="@style/TextAppearance.Material3.HeadlineMedium" />
+    <style name="Text.AppSuite.SectionSubtitle" parent="@style/TextAppearance.Material3.TitleSmall" />
+
+    <style name="Widget.AppSuite.TextInputLayout.Outlined" parent="Widget.Material3.TextInputLayout.OutlinedBox" />
+
+    <style name="TextAppearance.AppSuite.ChipStatus" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance.AppSuite.PinKey" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!-- TextInput (filled) -->
+    <style name="App.InputLayout.Filled" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/google_background_settings</item>
+
+        <item name="boxCornerRadiusTopStart">24dp</item>
+        <item name="boxCornerRadiusTopEnd">24dp</item>
+        <item name="boxCornerRadiusBottomStart">24dp</item>
+        <item name="boxCornerRadiusBottomEnd">24dp</item>
+
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+
+        <!-- Visible en dark -->
+        <item name="boxStrokeColor">@color/google_line</item>
+    </style>
+
+    <!-- EditTexts: dejo SOLO comportamiento (no look & feel) -->
+    <style name="App.InputEditText.SingleLine" parent="Widget.Material3.TextInputEditText.FilledBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">textPersonName|textCapWords|textNoSuggestions</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:importantForAutofill">no</item>
+        <item name="android:autofillHints" />
+    </style>
+
+    <style name="App.InputEditText.MultiLine" parent="Widget.Material3.TextInputEditText.FilledBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">textMultiLine|textCapSentences</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:gravity">top|start</item>
+        <item name="android:minLines">3</item>
+        <item name="android:maxLines">6</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:overScrollMode">ifContentScrolls</item>
+        <item name="android:importantForAutofill">no</item>
+        <item name="android:autofillHints" />
+    </style>
+
+    <style name="App.InputEditText.Date" parent="App.InputEditText.SingleLine">
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:clickable">true</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:inputType">date</item>
+        <item name="android:imeOptions">actionNone</item>
+    </style>
+
+    <style name="App.InputEditText.TimeDropdown" parent="Widget.Material3.TextInputEditText.FilledBox">
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:longClickable">false</item>
+    </style>
+
+    <style name="App.InputEditText.Dropdown" parent="Widget.Material3.TextInputEditText.FilledBox">
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:longClickable">false</item>
+    </style>
+
+    <style name="App.InputEditText.ReadOnly" parent="Widget.Material3.TextInputEditText.FilledBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:inputType">none</item>
+    </style>
+
+    <!-- FAB: ahora es “stock” (Expressive/Material decide sombra, color, etc) -->
+    <style name="Widget.AppSuite.Fab" parent="Widget.Material3.FloatingActionButton.Primary" />
+
+    <!-- Home Appointments (widget) -->
+    <style name="Text.AppSuite.HomeAppointments.Date" parent="@style/TextAppearance.Material3.LabelLarge">
+        <item name="android:textColor">@color/google_text_secondary</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextAppearance.AppSuite.TimeCondensed" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:fontFamily">@font/roboto_flex_variable</item>
+        <item name="android:textSize">84sp</item>
+        <item name="android:lineHeight">84sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Text.AppSuite.HomeAppointments.Title" parent="@style/TextAppearance.Material3.LabelLarge.Emphasized">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!-- Botones utilitarios (siguen usando tokens, no colores hardcode) -->
+    <style name="Widget.App.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="iconTint">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Widget.App.Button.DangerTonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="backgroundTint">?attr/colorErrorContainer</item>
+        <item name="android:textColor">?attr/colorOnErrorContainer</item>
+        <item name="iconTint">?attr/colorOnErrorContainer</item>
+    </style>
 
     <!-- ========================= -->
     <!-- PROGRESS “WAVY” (M3E)     -->
     <!-- ========================= -->
+    <style name="Widget.App.WavyLinearProgress" parent="Widget.Material3Expressive.LinearProgressIndicator">
+        <item name="trackThickness">8dp</item>
+        <item name="trackCornerRadius">4dp</item>
 
+        <!-- Wavy properties -->
+        <item name="waveAmplitude">2dp</item>
+        <item name="wavelength">24dp</item>
+        <item name="waveSpeed">24dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.Avatar" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.AppSuite.ToggleButton.WallpaperMode" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="backgroundTint">@color/toggle_mode_bg</item>
+        <item name="strokeColor">@color/toggle_mode_stroke</item>
+        <item name="android:textColor">@color/toggle_mode_fg</item>
+        <item name="iconTint">@color/toggle_mode_fg</item>
+        <item name="rippleColor">@color/google_blue</item>
+    </style>
+
+    <style name="ShapeAppearance.App.9SidedCookie" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">35%</item>
+    </style>
+
+    <style name="ShapeAppearance.App.ExpressiveCard" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">28dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.Card.TopFlat" parent="Base.Theme.AppSuite">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+
+        <item name="cornerSizeBottomLeft">28dp</item>
+        <item name="cornerSizeBottomRight">28dp</item>
+    </style>
 </resources>

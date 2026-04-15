@@ -3,12 +3,18 @@ package com.sunshine.appsuite.budget.orders.data
 import com.google.gson.annotations.SerializedName
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface OrdersApi {
     @GET("api/v1/service-orders/{service_order}")
     suspend fun getOrder(
         @Path("service_order") orderCode: String
     ): OrderResponse
+
+    @GET("api/v1/service-orders")
+    suspend fun searchOrders(
+        @Query("search") query: String
+    ): ServiceOrdersResponse
 }
 
 data class OrderResponse(

@@ -2,6 +2,7 @@
 activityKtx = "1.13.0"
 agp = "9.1.1"
 coreSplashscreen = "1.2.0"
+slidingpanelayout = "1.2.0"
 firebaseBom = "34.11.0"
 firebaseAppDistribution = "5.1.1"
 fragmentKtx = "1.8.9"
@@ -47,6 +48,7 @@ androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref
 androidx-biometric = { module = "androidx.biometric:biometric", version.ref = "biometricKtx" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+androidx-slidingpanelayout = { group = "androidx.slidingpanelayout", name = "slidingpanelayout", version.ref = "slidingpanelayout" }
 androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
 androidx-graphics-shapes = { module = "androidx.graphics:graphics-shapes", version.ref = "graphicsShapes" }
 androidx-print = { module = "androidx.print:print", version.ref = "print" }

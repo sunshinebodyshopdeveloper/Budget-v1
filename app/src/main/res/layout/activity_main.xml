@@ -1,42 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:background="@color/google_white">
+    android:orientation="horizontal">
 
-    <!-- CONTENIDO PRINCIPAL -->
+    <com.google.android.material.navigationrail.NavigationRailView
+        android:id="@+id/navigation_rail"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/budget_rail_menu"
+        app:headerLayout="@layout/layout_rail_header"
+        app:labelVisibilityMode="labeled"
+        android:background="?attr/colorSurface"/>
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="32dp">
 
-        <!-- Botón perfil de usuario (avatar) -->
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resumen de Hoy"
+            style="@style/TextAppearance.Material3.HeadlineLarge"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="16dp"
-            app:cardCornerRadius="28dp"
-            app:cardUseCompatPadding="false"
-            app:cardElevation="0dp"
+            android:id="@+id/btnStartScan"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="32dp"
+            app:cardBackgroundColor="?attr/colorPrimaryContainer"
             app:strokeWidth="0dp"
-            app:cardBackgroundColor="@color/google_background_card"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_profile"
-                android:layout_gravity="center"
-                android:contentDescription="@string/profile"
-                app:tint="@color/menu_button_icon" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <ImageView
+                    android:id="@+id/ivScanIcon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_car"
+                    app:tint="?attr/colorOnPrimaryContainer"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/tvScanLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/tvScanLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Escanear Placa o NIV"
+                    style="@style/TextAppearance.Material3.TitleLarge"
+                    android:textColor="?attr/colorOnPrimaryContainer"
+                    app:layout_constraintTop_toBottomOf="@+id/ivScanIcon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/btnStartScan">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="12dp"
+                app:cardCornerRadius="24dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvCountPending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        style="@style/TextAppearance.Material3.DisplaySmall" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendientes"
+                        style="@style/TextAppearance.Material3.LabelLarge" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                app:cardCornerRadius="24dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvCountSent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8"
+                        style="@style/TextAppearance.Material3.DisplaySmall" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enviados"
+                        style="@style/TextAppearance.Material3.LabelLarge" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

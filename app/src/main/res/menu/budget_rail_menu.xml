@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_inspection"
+        android:icon="@drawable/ic_car"
+        android:title="Inspección" />
+    <item
+        android:id="@+id/nav_parts"
+        android:icon="@drawable/ic_car"
+        android:title="Despiece" />
+    <item
+        android:id="@+id/nav_photos"
+        android:icon="@drawable/ic_car"
+        android:title="Evidencias" />
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/ic_car"
+        android:title="Historial" />
+</menu>

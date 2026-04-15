@@ -17,53 +17,42 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
-import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.tasks.Tasks
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import com.sunshine.appsuite.budget.R
-import com.sunshine.appsuite.budget.data.network.ApiClient
+import com.sunshine.appsuite.budget.databinding.ActivitySmartScannerBinding
 import com.sunshine.appsuite.budget.orders.budget.BudgetActivity
-import com.sunshine.appsuite.budget.orders.data.OrdersApi
-import com.sunshine.appsuite.budget.security.TokenManager
-import com.sunshine.appsuite.budget.databinding.ActivityQrScannerBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import java.util.concurrent.Executors
 
+/**
+ * Scanner inteligente que detecta QR (OT-), Placas y NIV.
+ * Redirige directamente a BudgetActivity sin usar BottomSheets.
+ */
 class SmartScannerActivity : AppCompatActivity() {
 
     companion object {
-        const val EXTRA_QR_VALUE = "extra_qr_value"
         const val OT_PREFIX = "OT-"
-        private const val SHEET_TAG = "QrScanResultBottomSheet"
-        private const val ANTI_SPAM_MS = 2000L
+        private const val ANTI_SPAM_MS = 1500L
     }
 
-    private lateinit var binding: ActivityQrScannerBinding
+    private lateinit var binding: ActivitySmartScannerBinding
     private val cameraExecutor = Executors.newSingleThreadExecutor()
     private val uiExecutor by lazy { ContextCompat.getMainExecutor(this) }
 
-    // Motores ML Kit (Play Services)
+    // Motores ML Kit [cite: 1]
     private val barcodeScanner = BarcodeScanning.getClient()
     private val textRecognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
 
     private var camera: Camera? = null
     private var scanLocked = false
     private var lastHitAt = 0L
-    private var fetchJob: Job? = null
-
-    private val ordersApi by lazy {
-        ApiClient.createRetrofit(TokenManager(this)).create(OrdersApi::class.java)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityQrScannerBinding.inflate(layoutInflater)
+        binding = ActivitySmartScannerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupSystemBars()
@@ -131,11 +120,11 @@ class SmartScannerActivity : AppCompatActivity() {
         val mediaImage = imageProxy.image ?: return imageProxy.close()
         val image = InputImage.fromMediaImage(mediaImage, imageProxy.imageInfo.rotationDegrees)
 
+        // Procesamiento paralelo de Barcode y Texto [cite: 1]
         val barcodeTask = barcodeScanner.process(image)
         val textTask = textRecognizer.process(image)
 
         Tasks.whenAllComplete(barcodeTask, textTask).addOnCompleteListener {
-            // ✅ CORRECCIÓN: Validar éxito para evitar CancellationException
             if (!isFinishing && !isDestroyed && !scanLocked) {
                 val barcodes = if (barcodeTask.isSuccessful) barcodeTask.result else null
                 val visionText = if (textTask.isSuccessful) textTask.result else null
@@ -143,9 +132,9 @@ class SmartScannerActivity : AppCompatActivity() {
                 // 1. Prioridad QR (Orden de Servicio)
                 val qrCode = barcodes?.firstOrNull()?.rawValue
                 if (!qrCode.isNullOrBlank() && qrCode.startsWith(OT_PREFIX, ignoreCase = true)) {
-                    handleDetection(qrCode, isQr = true)
+                    navigateToBudget(qrCode.uppercase().trim())
                 }
-                // 2. Si no hay QR, buscar Placa o NIV en el texto
+                // 2. Si no hay QR, buscar Placa o NIV
                 else if (visionText != null) {
                     analyzeVehicleText(visionText.text)
                 }
@@ -155,11 +144,9 @@ class SmartScannerActivity : AppCompatActivity() {
     }
 
     private fun analyzeVehicleText(rawText: String) {
-        // Quitamos espacios y saltos de línea, pero MANTENEMOS los guiones si el OCR los lee
         val text = rawText.uppercase().trim()
 
-        // Regex ajustado: 3 letras, guion, 3 números, guion, 1 alfanumérico
-        // Ejemplo: ABC-123-A o ABC-123-4
+        // Regex para Placas (Ej: ABC-123-A) y NIV (17 caracteres alfanuméricos) [cite: 1]
         val platePattern = Regex("[A-Z]{3}-\\d{3}-[A-Z0-9]")
         val nivPattern = Regex("[A-HJ-NPR-Z0-9]{17}")
 
@@ -167,12 +154,16 @@ class SmartScannerActivity : AppCompatActivity() {
         val niv = nivPattern.find(text)?.value
 
         when {
-            plate != null -> handleDetection(plate, isQr = false, typeLabel = "Placa")
-            niv != null -> handleDetection(niv, isQr = false, typeLabel = "NIV")
+            plate != null -> navigateToBudget(plate)
+            niv != null -> navigateToBudget(niv)
         }
     }
 
-    private fun handleDetection(value: String, isQr: Boolean, typeLabel: String = "") {
+    /**
+     * Navega directamente a la pantalla de presupuesto.
+     * Ya no se llama al QrScanResultBottomSheet.
+     */
+    private fun navigateToBudget(query: String) {
         val now = SystemClock.elapsedRealtime()
         if (now - lastHitAt < ANTI_SPAM_MS) return
 
@@ -180,48 +171,13 @@ class SmartScannerActivity : AppCompatActivity() {
         scanLocked = true
 
         uiExecutor.execute {
-            // ✅ Toast solo si es Placa o NIV
-            if (!isQr && typeLabel.isNotEmpty()) {
-                toast("$typeLabel detectado: ${value.uppercase()}")
-
-                val intent = Intent(this, BudgetActivity::class.java).apply {
-                    putExtra("EXTRA_BUDGET_SEARCH_QUERY", value)
-                    putExtra("EXTRA_BUDGET_SCAN_TYPE", typeLabel)
-                }
-                startActivity(intent)
-
-                finish()
-            } else {
-                showBottomSheet(value, isQr)
-                if (isQr) fetchOrderByCode(value)
+            val intent = Intent(this, BudgetActivity::class.java).apply {
+                putExtra("EXTRA_BUDGET_SEARCH_QUERY", query)
+                // Limpiar el stack para que al dar atrás no regrese al scanner si no es necesario
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
             }
-        }
-    }
-
-    private fun showBottomSheet(code: String, isQr: Boolean) {
-        QrScanResultBottomSheet.newInstance(code, isQr).apply {
-            callback = object : QrScanResultBottomSheet.Callback {
-                override fun onDismissed() {
-                    scanLocked = false
-                    fetchJob?.cancel()
-                }
-            }
-        }.show(supportFragmentManager, SHEET_TAG)
-    }
-
-    private fun fetchOrderByCode(code: String) {
-        fetchJob?.cancel()
-        fetchJob = lifecycleScope.launch {
-            try {
-                val response = withContext(Dispatchers.IO) { ordersApi.getOrder(code) }
-                val sheet = supportFragmentManager.findFragmentByTag(SHEET_TAG) as? QrScanResultBottomSheet
-                sheet?.showOrder(response.data)
-            } catch (e: Exception) {
-                // Solo mostrar error si realmente esperábamos una OT
-                toast(R.string.qr_scanner_invalid_qr_title)
-                val sheet = supportFragmentManager.findFragmentByTag(SHEET_TAG) as? QrScanResultBottomSheet
-                sheet?.dismiss()
-            }
+            startActivity(intent)
+            finish() // Cerramos el scanner para liberar cámara
         }
     }
 
@@ -239,18 +195,12 @@ class SmartScannerActivity : AppCompatActivity() {
         window.navigationBarColor = Color.TRANSPARENT
     }
 
-    // --- Helpers de Toast ---
     private fun toast(@StringRes resId: Int) {
         Toast.makeText(this, getString(resId), Toast.LENGTH_SHORT).show()
     }
 
-    private fun toast(text: String) {
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
-    }
-
     override fun onDestroy() {
         scanLocked = true
-        fetchJob?.cancel()
         cameraExecutor.shutdown()
         runCatching { barcodeScanner.close() }
         runCatching { textRecognizer.close() }

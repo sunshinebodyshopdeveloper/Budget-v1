@@ -2,132 +2,56 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/root_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F2F5"> <com.google.android.material.appbar.AppBarLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@android:color/transparent"
-    app:elevation="0dp">
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:navigationIcon="@drawable/abc_ic_ab_back_material"
-        app:title="Detalle del Presupuesto"
-        app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge" />
-</com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="24dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:background="@android:color/white"
+            app:contentScrim="@android:color/white"
+            app:expandedTitleMarginBottom="28dp"
+            app:expandedTitleMarginStart="24dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:titleCollapseMode="fade">
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginEnd="16dp"
-            app:cardCornerRadius="32dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/cardSummarySide"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.core.widget.NestedScrollView
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                app:layout_collapseMode="pin"
+                app:menu="@menu/budget_actions_menu"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:navigationIconTint="?attr/colorOnSurface">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="24dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivUserProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                    app:strokeColor="?attr/colorOutlineVariant"
+                    app:strokeWidth="1dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Servicios Seleccionados"
-                        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
-                        android:textStyle="bold" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvBudgetItems"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        tools:listitem="@android:layout/simple_list_item_2" />
-                </LinearLayout>
-            </androidx.core.widget.NestedScrollView>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardSummarySide"
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="32dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="24dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Detalle de Pago"
-                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
-                    android:textStyle="bold" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp">
-                    <TextView android:text="Subtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-                    <TextView android:id="@+id/tvSubtotal" android:text="$1,344" android:layout_alignParentEnd="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp">
-                    <TextView android:text="Descuento" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-                    <TextView
-                        android:text="-$24" android:textColor="#FF5252" android:layout_alignParentEnd="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
-                </RelativeLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginVertical="20dp"
-                    android:background="#EEEEEE" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView android:text="Total" android:textAppearance="@style/TextAppearance.Material3.TitleLarge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
-                    <TextView android:id="@+id/tvTotalAmount" android:text="$1,320" android:textAppearance="@style/TextAppearance.Material3.TitleLarge" android:layout_alignParentEnd="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
-                </RelativeLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnBookNow"
-                    style="@style/Widget.Material3.Button"
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:layout_marginTop="24dp"
-                    android:text="Confirmar Ahora"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
-                    app:cornerRadius="20dp" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

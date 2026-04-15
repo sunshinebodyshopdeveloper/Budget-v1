@@ -7,6 +7,7 @@ import com.sunshine.appsuite.budget.data.network.AuthApi
 import com.sunshine.appsuite.budget.data.network.UserApi
 import com.sunshine.appsuite.budget.orders.data.OrdersApi
 import com.sunshine.appsuite.budget.security.TokenManager
+import com.sunshine.appsuite.budget.user.UserProfileStore
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 
@@ -28,6 +29,9 @@ class BudgetApp : Application() {
         private set
 
     lateinit var ordersApi: OrdersApi
+        private set
+
+    lateinit var userProfileStore: UserProfileStore
         private set
 
     private fun tryInheritSession() {
@@ -59,5 +63,13 @@ class BudgetApp : Application() {
         authApi = retrofit.create(AuthApi::class.java)
         userApi = retrofit.create(UserApi::class.java)
         ordersApi = retrofit.create(OrdersApi::class.java)
+
+        userProfileStore = UserProfileStore(
+            appContext = this,
+            tokenManager = tokenManager,
+            userApi = userApi
+        )
+
+        userProfileStore.ensureFresh()
     }
 }

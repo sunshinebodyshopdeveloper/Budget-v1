@@ -84,6 +84,9 @@ dependencies {
     // SplashScreen
     implementation(libs.androidx.core.splashscreen)
 
+    // SlidingPaneLayout
+    implementation(libs.androidx.slidingpanelayout)
+
     // UI extra: lists, pagination type onboarding
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.viewpager2)
