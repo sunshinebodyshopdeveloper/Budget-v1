@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.updatePadding
 import com.google.android.gms.tasks.Tasks
 import com.google.mlkit.vision.barcode.BarcodeScanning
@@ -64,12 +65,18 @@ class SmartScannerActivity : AppCompatActivity() {
         binding.btnClose.setOnClickListener { finish() }
         binding.btnFlash.setOnClickListener { toggleFlash() }
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
-            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            binding.topBar.updatePadding(top = bars.top)
-            binding.footerBar.updatePadding(bottom = bars.bottom)
-            insets
-        }
+//        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
+//            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+//            binding.topBar.updatePadding(top = bars.top)
+//            binding.footerBar.updatePadding(bottom = bars.bottom)
+//            insets
+//        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val controller = WindowCompat.getInsetsController(window, window.decorView)
+        controller.hide(WindowInsetsCompat.Type.systemBars())
     }
 
     private fun checkPermissions() {
@@ -190,9 +197,21 @@ class SmartScannerActivity : AppCompatActivity() {
     }
 
     private fun setupSystemBars() {
+        // 1. Configurar la ventana para que se dibuje detrás de las barras (ya lo tienes)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         window.statusBarColor = Color.TRANSPARENT
         window.navigationBarColor = Color.TRANSPARENT
+
+        // 2. Obtener el controlador de insets
+        val controller = WindowCompat.getInsetsController(window, window.decorView)
+
+        // 3. Ocultar barras de estado y navegación
+        controller.hide(WindowInsetsCompat.Type.systemBars())
+
+        // 4. Configurar el comportamiento: que aparezcan solo si el usuario desliza desde el borde
+        // y se oculten solas después de unos segundos (Sticky Immersive)
+        controller.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
     }
 
     private fun toast(@StringRes resId: Int) {

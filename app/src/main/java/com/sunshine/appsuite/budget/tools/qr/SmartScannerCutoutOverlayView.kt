@@ -9,14 +9,14 @@ import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
 
-class QrCutoutOverlayView @JvmOverloads constructor(
+class SmartScannerCutoutOverlayView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
 ) : View(context, attrs) {
 
-    // Ajustes rápidos
-    var cutoutSizeDp: Float = 260f
-    var cutoutCornerRadiusDp: Float = 21f  // ~8% de 260dp (como tu drawable)
+    var cutoutWidthDp: Float = 632f
+    var cutoutHeightDp: Float = 280f
+    var cutoutCornerRadiusDp: Float = 24f
     var scrimColor: Int = 0xB3000000.toInt()
 
     private val scrimPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
@@ -31,7 +31,6 @@ class QrCutoutOverlayView @JvmOverloads constructor(
     private val cutoutRect = RectF()
 
     init {
-        // Para que CLEAR funcione bien en la mayoría de dispositivos
         setLayerType(LAYER_TYPE_HARDWARE, null)
     }
 
@@ -42,25 +41,16 @@ class QrCutoutOverlayView @JvmOverloads constructor(
 
         val w = width.toFloat()
         val h = height.toFloat()
-
-        val cutoutSize = dp(cutoutSizeDp)
-
-        // Centrado (igual que tu diseño actual)
-        val left = (w - cutoutSize) / 2f
-        val top = (h - cutoutSize) / 2f
-        cutoutRect.set(left, top, left + cutoutSize, top + cutoutSize)
-
+        val rectW = dp(cutoutWidthDp)
+        val rectH = dp(cutoutHeightDp)
+        val left = (w - rectW) / 2f
+        val top = (h - rectH) / 2f
+        cutoutRect.set(left, top, left + rectW, top + rectH)
         val radius = dp(cutoutCornerRadiusDp)
-
-        // Capa para poder “perforar”
         val checkpoint = canvas.saveLayer(0f, 0f, w, h, null)
 
-        // Scrim completo
         canvas.drawRect(0f, 0f, w, h, scrimPaint)
-
-        // Cutout redondeado
         canvas.drawRoundRect(cutoutRect, radius, radius, clearPaint)
-
         canvas.restoreToCount(checkpoint)
     }
 

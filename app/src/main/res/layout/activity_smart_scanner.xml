@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:keepScreenOn="true">
@@ -10,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <com.sunshine.appsuite.budget.tools.qr.QrCutoutOverlayView
+    <com.sunshine.appsuite.budget.tools.qr.SmartScannerCutoutOverlayView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -22,16 +23,16 @@
 
         <ImageView
             android:id="@+id/ivScanCorners"
-            android:layout_width="360dp"
-            android:layout_height="360dp"
+            android:layout_width="832dp"
+            android:layout_height="437dp"
+            android:clickable="false"
             android:contentDescription="@null"
+            android:focusable="false"
             android:importantForAccessibility="no"
             android:src="@drawable/ic_qr_scan_corners_google"
-            android:clickable="false"
-            android:focusable="false"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             style="@style/TextAppearance.Material3.TitleLarge.Emphasized"
